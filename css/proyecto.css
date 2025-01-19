@@ -756,7 +756,10 @@ Queremos que ocupe el 100% y le ponemos fixed */
 .Footer-wrapper{
     width: 100%;
     min-height: 3.125rem;
+    max-width: 1900px;
     /* background-color: firebrick; */
+
+    margin: auto;
 
     display: flex;
     flex-flow: row-reverse nowrap;
@@ -883,6 +886,13 @@ Queremos que ocupe el 100% y le ponemos fixed */
 
     pointer-events: none;
   
+}
+
+@media (max-width: 1300px){
+    .Habilidad-p{
+        text-align: center;
+    }
+
 }
 
 
@@ -1018,9 +1028,10 @@ Queremos que ocupe el 100% y le ponemos fixed */
         animation: slideDown 2s ease 1 5s both;
     }
 
+    /* Le ponemos al 60 porque no quiero que suba demasiado y se vaya de bloque de habilidad */
     @keyframes slideDown {
         from{
-            transform: translateY(-100%);
+            transform: translateY(-60%);
         }
         to{
             transform: translateY(0%);

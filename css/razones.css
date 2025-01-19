@@ -118,6 +118,7 @@ form , input , textarea , label , select , buttom{
 /* Le damos un padding de 50px para que esté ajustado con la foto*/
 .Header{
     width: 100%;
+    max-width: 1900px;
     min-height: 9.375rem;
 
     margin: auto;
@@ -207,6 +208,9 @@ form , input , textarea , label , select , buttom{
 /* Comenzamos la parte principal de la página */
 .Main{
     width: 100%;
+    max-width: 1900px;
+
+    margin: auto;
     background-color: var(--var-c-primary);
 }
 
@@ -222,9 +226,6 @@ form , input , textarea , label , select , buttom{
     min-height: 18.75rem;
     margin: auto;
 
-    /* le ponemos position relative porque los textos van a ir encima */
-    position: relative;
-
     /* Le damos esta propiedad para que la imagen ocupe el espacio de la caja */
     object-fit: cover;
 
@@ -235,9 +236,6 @@ form , input , textarea , label , select , buttom{
 .Hero-p--logros{
     /* Los valores del position se han querido dar en esos valores en específico */
     width: 70%;
-    position: absolute;
-    top: 30rem;
-    left: 20rem;
 
     color:var(--var-c-secundary);
     font-size: 2em;
@@ -248,9 +246,6 @@ form , input , textarea , label , select , buttom{
 .Hero-p--pasos{
     /* Los valores del position se han querido dar en esos valores en específico */
     width: 70%;
-    position: absolute;
-    top: 60rem;
-    left: 35rem;
 
     color: var(--var-c-textos);
     font-size: 2em;
@@ -508,7 +503,10 @@ Queremos que ocupe el 100% y le ponemos fixed */
 .Footer-wrapper{
     width: 100%;
     min-height: 3.125rem;
+    max-width: 1900px;
     /* background-color: firebrick; */
+
+    margin: auto;
 
     display: flex;
     flex-flow: row-reverse nowrap;
@@ -650,18 +648,6 @@ Queremos que ocupe el 100% y le ponemos fixed */
 
 
 @media (max-width: 2080px){
-    .Hero-p--logros{
-        position: absolute;
-        top: 30rem;
-        left: 5rem;
-    }
-        
-
-    .Hero-p--pasos{
-        position: absolute;
-        top: 50rem;
-        left: 21rem;
-    }
 
     .Contacto-div{
         padding: 0 3%;
