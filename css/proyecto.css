@@ -71,7 +71,7 @@ form , input , textarea , label , select , buttom{
     min-height: 2.2rem;
     background-color: #3b3b3b54;
     
-    padding: 0 4%;
+    padding: 0 2%;
 
     position: fixed;
     top: 0;
@@ -118,17 +118,17 @@ form , input , textarea , label , select , buttom{
 /* Comienza el header */
 /* Le damos un padding de 50px para que esté ajustado con la foto*/
 .Header{
-    width: 95%;
+    width: 100%;
     min-height: 9.375rem;
     max-width: 1900px;
 
     margin: auto;
 
-    /* Colocamos en columna el logo y el nav */
+    /* Colocamos en fila el logo y el nav */
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: start;
-    align-items: start;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 
     animation: slideDown 2s ease 1 both;
 }
@@ -151,14 +151,18 @@ form , input , textarea , label , select , buttom{
 }
 
 .Header-nav{
-    width: 50%;
-    min-height: 1.25rem;
-    max-width: 600px;
+    width: 60%;
+
+    padding: 0 5%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:end;
+    align-items: end;
 }
 
 .Header-ul{
     width: 100%;
-    min-height: 3.125rem;
 
     display: flex;
     flex-flow: row nowrap;
@@ -169,7 +173,7 @@ form , input , textarea , label , select , buttom{
 
 .Header-li{
     width: calc(100%/3);
-    text-align: start;
+    text-align: end;
 }
 
 /* Aplicamos propiedades diferentes cuando estamos por encima */
@@ -223,6 +227,7 @@ form , input , textarea , label , select , buttom{
     flex-flow: column wrap;
     justify-content: center;
     align-content: center;
+    
     animation: slideDown 2s ease 1 both;
 }
 
@@ -881,8 +886,19 @@ Queremos que ocupe el 100% y le ponemos fixed */
 }
 
 
-
+/* Aplicamos diferentes propiedades dependiendo de los breakpoints */
 @media (max-width: 1170px){
+    
+    .Header-ul{
+        width: 100%;
+        flex-flow: column nowrap;
+    }
+
+    .Header-li{
+        width: 100%;
+        text-align: end;
+    }
+
     
     .Habilidades-texto{
         width: 100%;
@@ -918,31 +934,8 @@ Queremos que ocupe el 100% y le ponemos fixed */
     }
 }
 
-@media (max-width: 1120px){
-    .Header-ul{
-        width: 100%;
-    }
-}
-
 
 @media (max-width: 930px){
-    .Header{
-        min-height: 6.25rem;
-        flex-flow: column nowrap;
-        justify-content: start;
-        align-items: start;
-    }
-    .Header-ul{
-        width: 100%;
-        flex-flow: column nowrap;
-        justify-content: start;
-        align-items: start;
-    }
-
-    .Header-li{
-        width: 100%;
-    }
-
 
     .Textos-div{
         width: 100%;
@@ -951,6 +944,24 @@ Queremos que ocupe el 100% y le ponemos fixed */
         background-position: top;
         background-size: cover;
 
+        
+        /* Le aplicamos una animación solo para resoluciones pequeñas */
+        animation: slideDown 2s ease 1 both;
+    }
+
+    
+    @keyframes slideDown {
+        from{
+            transform: translateX(-100%);
+        }
+        to{
+            transform: translateX(0%);
+        }
+        
+    }
+
+    #Titulo-h3{
+        font-size: 1.3em;
     }
 
     .Habilidades-grid{
@@ -971,21 +982,8 @@ Queremos que ocupe el 100% y le ponemos fixed */
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
-
-        /* Le aplicamos una animación solo para resoluciones pequeñas */
-        animation: slideDown 2s ease 1 both;
     }
 
-
-        @keyframes slideDown {
-            from{
-                transform: translateY(-100%);
-            }
-            to{
-                transform: translateY(0%);
-            }
-            
-        }
 
     .Habilidades-texto{
         width: 100%;
@@ -1011,6 +1009,25 @@ Queremos que ocupe el 100% y le ponemos fixed */
        display: none;
        
     }
+
+    .Habilidad-p{
+        font-size: 1.2em;
+        width: 100%;
+        text-align: center;
+        /* Le aplicamos una animación solo para resoluciones pequeñas */
+        animation: slideDown 2s ease 1 5s both;
+    }
+
+    @keyframes slideDown {
+        from{
+            transform: translateY(-100%);
+        }
+        to{
+            transform: translateY(0%);
+        }
+        
+    }
+
 
     .Wrapper-div{
         flex-direction: column-reverse;

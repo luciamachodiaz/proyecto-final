@@ -1,3 +1,4 @@
+/* Aplicamos el reset para quitar propiedades a las etiquetas con valores determinados */
 *{
     margin: 0rem;
     padding: 0rem;
@@ -37,14 +38,19 @@ svg{
     font-family: "Poppins", serif;
     font-size: 1.1em;
 
+    /* Esto son propiedades que se van a repetir durante todo el código */
     --var-c-primary: #3b3b3b;
     --var-c-secundary: #ede06b;
     --var-c-textos: whitesmoke;
 
 }
+
 body{
     hyphens: auto;
     background-color: var(--var-c-primary);
+
+    /* Lo posionamos en el centro para aquellas secciones con max width */
+    /* Quitamos el cursor para poner uno creado */
     cursor: none;
     margin: auto;
    
@@ -142,6 +148,7 @@ Además la hacemos fixed para que siempre esté por encima */
     /* Al principio lo ocultamos luego ya en resoluciones determinadas será block */
     display: none;
 
+    /* Creamos una animación para que hacerlo más dinámico de 2s */
     animation: slideDown 2s ease 1 both;
 }
 
@@ -176,6 +183,7 @@ Además la hacemos fixed para que siempre esté por encima */
 .Movil-ul{
     width: 100%;
 
+    /* Lo posicionamos a la derecha alineado con contacto */
     display: flex;
     flex-flow: row nowrap;
     justify-content:end;
@@ -321,7 +329,6 @@ Le aplicamos un 75% porque el .Header tiene un 25%*/
 .Wrapper-div{
     width: 450px;
     min-height: 250px;
-
 
     position: absolute;
     top: calc( 50% - ( 250px / 2));
@@ -495,6 +502,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
 }
 
 
+/* Vamos a aplicar unas propiedades dependiendo de los breakpoints en donde hemos visto que la estructura requiere un cambio */
 @media (max-width: 1270px){
     .Container-div{
         width: 100%;
@@ -502,6 +510,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
     }
 
     .Hero{
+        /* Para que el movil siempre aparezca en pantalla */
         background-position: center;
      }
 
@@ -513,6 +522,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
         display: none;
     }
 
+    /* Al quitar el header añadimos el header del movil */
     .Header-movil{
         
     /* Colocamos en row el logo y el nav */
@@ -522,7 +532,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
     align-items: center;
 
     width: 100%;
-    min-height: 150px;
+    min-height: 100px;
     background-color: var(--var-c-primary);
     padding: 2.2rem 0 0 0;
 
@@ -538,6 +548,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
         width: 100%;
     }
     .Movil-ul{
+
         width: 100%;
     }
 }
@@ -551,7 +562,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
     .Footer-derecha{
         width: 50%;
         justify-content: start;
-        padding: 0;
+        padding: 2%;
         margin: 0;
         width: 100%;
     }
@@ -564,6 +575,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
 
 
 @media (max-width: 770px){
+    /* Vamos a cambiar la disposición de las listas de nav para que todo entre en la pantalla y sea visible de un vistazo */
     .Movil-ul{
         width: 100%;
         flex-flow: column nowrap;
@@ -586,5 +598,6 @@ Queremos que ocupe el 100% y le ponemos fixed */
     .Wrapper-div{
         width: 50%;
         top: 400px;
+        left: 30px;
     }
 }

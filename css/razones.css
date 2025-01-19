@@ -72,6 +72,7 @@ form , input , textarea , label , select , buttom{
     background-color: #3b3b3b54;
     
     /* Vamos a darle un pequeño espacio por los lados para que quede el icono de linkedn como lo último en el contenido */
+    padding: 0 2%;
 
     position: fixed;
     top: 0;
@@ -116,16 +117,16 @@ form , input , textarea , label , select , buttom{
 /* Comienza el header */
 /* Le damos un padding de 50px para que esté ajustado con la foto*/
 .Header{
-    width: 95%;
+    width: 100%;
     min-height: 9.375rem;
 
     margin: auto;
 
-    /* Colocamos en columna el logo y el nav */
+    /* Colocamos en fila el logo y el nav */
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: start;
-    align-items: start;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 
     animation: slideDown 2s ease 1 both;
 }
@@ -150,14 +151,18 @@ form , input , textarea , label , select , buttom{
 }
 
 .Header-nav{
-    width: 50%;
-    min-height: 20px;
-    max-width: 600px;
+    width: 60%;
+
+    padding: 0 5%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:end;
+    align-items: end;
 }
 
 .Header-ul{
     width: 100%;
-    min-height: 50px;
 
     display: flex;
     flex-flow: row nowrap;
@@ -168,7 +173,7 @@ form , input , textarea , label , select , buttom{
 
 .Header-li{
     width: calc(100%/3);
-    text-align: start;
+    text-align: end;
 }
 
 /* Aplicamos propiedades diferentes cuando estamos por encima */
@@ -323,9 +328,8 @@ form , input , textarea , label , select , buttom{
     /* Tiene este position por el position del numero */
     position: relative;
 
-    /* Le damos un scale cuando estemos hover */
-    transition: scale 1s ease;
 }
+
 
 /* Añadimos propiedades para cuando el pongas el cursor por aspecto grid a otras etiquetas se le aplica algo */
 .Aspecto-grid:hover .Numero-grid{
@@ -358,7 +362,21 @@ form , input , textarea , label , select , buttom{
     font-size: 8em;
     font-weight: 600;
 
+    /* Le aplicamos una animación con un pequeño delay para que el usuario lo vea */
+    animation: slideDown 2s ease 1 4s both;
 }
+
+
+    @keyframes slideDown {
+        from{
+            transform: translateY(-100%);
+        }
+        to{
+            transform: translateY(0%);
+        }
+        
+    }
+
 
 
 .Titulo-grid{
@@ -650,18 +668,8 @@ Queremos que ocupe el 100% y le ponemos fixed */
     }
 }
 
-@media (max-width: 1120px){
-    .Header-nav{
-        width: 100%;
-    }
-}
-
 
 @media (max-width: 600px){
-    .Header-ul{
-       flex-flow: column wrap;
-       margin: 10px auto;
-    }
 
     .Aspecto-grid{
         padding: 0 0 2% 0;
@@ -671,6 +679,18 @@ Queremos que ocupe el 100% y le ponemos fixed */
 
 
 @media (max-width: 1400px){
+   
+
+    .Header-ul{
+        width: 100%;
+        flex-flow: column nowrap;
+    }
+
+    .Header-li{
+        width: 100%;
+        text-align: end;
+    }
+
     
     .Cartas-p{
         width: 100%;
