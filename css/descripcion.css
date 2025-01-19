@@ -1024,6 +1024,10 @@ Queremos que ocupe el 100% y le ponemos fixed */
     .Trabajo-section{
         flex-flow: column nowrap;
     }
+
+    .Trabajo-div{
+        width: 80%;
+    }
 }
 
 /* Probando en distintos breakpoints para intentar que no se solapen los logos */

@@ -217,6 +217,7 @@ form , input , textarea , label , select , buttom{
 .Hero{
     width: 100%;
     min-height: 18.75rem;
+    max-width: 1900px;
     margin: 0 0 50px 0;
 
 }
@@ -241,6 +242,9 @@ form , input , textarea , label , select , buttom{
     font-size: 2em;
     font-weight: 600;
     text-transform: uppercase;
+
+      /* El texto lo posicionamos a la izquierda */
+      text-align: center;
 }
 
 .Hero-p--pasos{
@@ -252,7 +256,7 @@ form , input , textarea , label , select , buttom{
     font-weight: 600;
     text-transform: uppercase;
 
-    /* Los textos los posicionamos a la izquierda */
+    /* El texto lo posicionamos a la izquierda */
     text-align: end;
 }
 /* Termina el hero */
