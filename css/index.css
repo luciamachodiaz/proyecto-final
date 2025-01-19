@@ -553,6 +553,13 @@ Queremos que ocupe el 100% y le ponemos fixed */
     }
 }
 
+/* Quitamos en modo tablet para abajo el cursor */
+@media (max-width: 1024px){
+    .Cursor-web{
+        display: none;
+    }
+}
+
 @media (max-width: 950px){
 
     .Footer-nav{

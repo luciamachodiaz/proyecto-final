@@ -632,6 +632,14 @@ Queremos que ocupe el 100% y le ponemos fixed */
   
 }
 
+/* Quitamos en modo tablet para abajo el cursor */
+@media (max-width: 1024px){
+    .Cursor-web{
+        display: none;
+    }
+}
+
+/* Le damos diferentes propiedades según los breakpoints */
 @media (max-width: 900px){
 
     .Footer-nav{
@@ -669,8 +677,6 @@ Queremos que ocupe el 100% y le ponemos fixed */
 
 
 @media (max-width: 1400px){
-   
-
     .Header-ul{
         width: 100%;
         flex-flow: column nowrap;
@@ -720,6 +726,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
         align-items: end;
 
         font-size: 1.4em;
+        text-align: end;
 
     }
 }

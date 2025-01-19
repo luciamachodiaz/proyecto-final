@@ -628,6 +628,10 @@ form , input , textarea , label , select , buttom{
     color: var(--var-c-textos);
 }
 
+.Historia-h4{
+    text-align: center;
+}
+
 .Historia-hito{
     padding: 6px;
 }
@@ -697,7 +701,7 @@ form , input , textarea , label , select , buttom{
 }
 
 .Trabajo-a{
-    width: 30%;
+    width: 100%;
     background: var(--var-c-primary);
 
     text-align: center;
@@ -855,7 +859,12 @@ Queremos que ocupe el 100% y le ponemos fixed */
 }
 
 /* Se han aplicado diferentes @media según los breakpoints donde la web necesitaba un cambio de estructura */
-
+/* Quitamos en modo tablet para abajo el cursor */
+@media (max-width: 1024px){
+    .Cursor-web{
+        display: none;
+    }
+}
 
 @media (max-width: 1200px){
 
@@ -875,13 +884,13 @@ Queremos que ocupe el 100% y le ponemos fixed */
 
 
     .Galeria-div--fotos{
-        width: 60%;
+        width: 50%;
         flex-wrap: wrap;
         gap: 30px;
     }
 
     .Galeria-img{
-        width: 150px;
+        width: 170px;
     }
     
     .Trayectoria-section{
@@ -987,7 +996,6 @@ Queremos que ocupe el 100% y le ponemos fixed */
         min-height: 12.5rem;
         margin: auto;
         flex-flow: column-reverse wrap;
-        gap: 30px;
     }
 
     .Galeria-div--fotos{
@@ -1047,13 +1055,13 @@ Queremos que ocupe el 100% y le ponemos fixed */
 
 @media (max-width: 600px){
     .Herramientas-div{
-        gap: 880px;
+        gap: 580px;
      }
 }
 
 @media (max-width: 500px){
     .Herramientas-div{
-        gap: 1000px;
+        gap: 900px;
      }
 }
 
