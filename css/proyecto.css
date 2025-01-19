@@ -1,0 +1,1045 @@
+/* Primero vamos a eliminar propiedades que tienen por defecto algunas etiquetas con el reset/normalizador */
+*{
+    margin: 0rem;
+    padding: 0rem;
+    border: 0rem;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    color: var(--var-c-textos);
+}
+
+p a{
+    display: inline;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+Img , svg, video{
+    width: 100%;
+    height: inherit;
+    display: block;
+}
+
+svg{
+   fill: currentColor;
+}
+
+:root{
+    font-family: "Poppins", serif;
+    font-size: 1.1em;
+
+    --var-c-primary: #3b3b3b;
+    --var-c-secundary: #ede06b;
+    --var-c-textos: whitesmoke;
+
+}
+body{
+    hyphens: auto;
+    background-color: var(--var-c-primary);
+
+    margin: auto;
+    cursor: none;
+    
+}
+
+h1 , h2 , h3 , h4 , h5 , h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+form , input , textarea , label , select , buttom{
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    display: block;
+}
+/* Fin del reset */
+
+/* Comenzamos a dar propiedades a la caja contacto */
+.Contacto{
+    width: 100%;
+    min-height: 2.2rem;
+    background-color: #3b3b3b54;
+    
+    padding: 0 4%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    color: var(--var-c-textos);
+}
+.Contacto-div{
+    width: 100%;
+    min-height: 2.2rem;
+    
+    /* En esta sección pondremos ese maxwidth porque el diseño lo permite para que el correo este visible en la primera seccion en pantallas grandes*/
+    max-width: 1900px;
+
+    margin: auto;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+.Contacto-svg{
+    width: 1rem;
+    min-height: 1rem;
+    color: var(--var-c-textos);
+}
+
+.Contacto-a{
+    text-align: end;
+}
+
+/* Cuando pasemos el cursor por encima cambia el color al secundario */
+.Contacto-svg:hover{
+    color: var(--var-c-secundary);
+}
+.Contacto-a:hover{
+    color: var(--var-c-secundary);
+}
+/* Termina seccion de contacto */
+
+/* Comienza el header */
+/* Le damos un padding de 50px para que esté ajustado con la foto*/
+.Header{
+    width: 95%;
+    min-height: 9.375rem;
+    max-width: 1900px;
+
+    margin: auto;
+
+    /* Colocamos en columna el logo y el nav */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: start;
+
+    animation: slideDown 2s ease 1 both;
+}
+
+/* El header tiene una animacion en vertical con ordenador */
+@keyframes slideDown {
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+    
+}
+/* Este es el logo del header */
+.Header-img{
+    width: 8rem;
+    min-height: 2rem;
+
+}
+
+.Header-nav{
+    width: 50%;
+    min-height: 1.25rem;
+    max-width: 600px;
+}
+
+.Header-ul{
+    width: 100%;
+    min-height: 3.125rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:start;
+    align-items: start;
+    
+}
+
+.Header-li{
+    width: calc(100%/3);
+    text-align: start;
+}
+
+/* Aplicamos propiedades diferentes cuando estamos por encima */
+.Yo-a{
+    color:var(--var-c-textos);
+    font-weight: 400;
+}
+
+.Yo-a:hover{
+        color: var(--var-c-secundary);
+    }
+
+.Proyectos-a{
+    color:var(--var-c-textos);
+    font-weight: 400;
+}
+
+.Proyectos-a:hover{
+    color: var(--var-c-secundary);
+}
+
+.Razones-a{
+    color:var(--var-c-textos);
+    font-weight: 400;
+}
+
+.Razones-a:hover{
+    color: var(--var-c-secundary);
+}
+/* ------------------------------------------------------------------------------------ */
+
+.Main{
+    width: 100%;
+}
+
+.Habilidades-grid{
+    width: 95%;
+    max-width: 1350px;
+    /* Ponemos un maxwidth determinado para que en pantallas grandes no se haga demasiado grande */
+    margin: auto;
+}
+
+.Textos-div{
+    width: 100%;
+    min-height: 12.5rem;
+    background: var(--var-c-primary);
+
+    padding: 50px 0;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    animation: slideDown 2s ease 1 both;
+}
+
+
+    @keyframes slideDown {
+        from{
+            transform: translateY(-100%);
+        }
+        to{
+            transform: translateY(0%);
+        }
+        
+    }
+
+
+
+#Titulo-h3{
+    font-size: 1.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: var(--var-c-secundary);
+}
+
+.Roles-p{
+    width: 100%;
+    min-height: 3.125rem;
+
+    margin: 10px auto;
+
+    font-size: 1.3em;
+    text-align: center;
+    text-transform: uppercase;
+
+    
+    color: var(--var-c-textos);
+}
+
+
+/* Dividimos los bloques en 3 columnas */
+.Habilidades-primero{
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Hacemos referencia a la foto para que coja el alto y ancho de su contenedora */
+.Habilidad-img{
+    width: 100%;
+    height: 100%;
+   
+    object-fit: cover;
+}
+
+
+.Habilidades-texto{
+    width: 100%;
+    /* No lo he puesto en variable porque es una ocasión especial */
+    background-color: rgba(245, 245, 245, 0.075);
+
+    /* Le ponemos un padding para que el texto no esté pegado a la contenedora */
+    padding: 5%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.Habilidad-p{
+    width: 50%;
+    min-height: 3.125rem;
+    margin: auto;
+
+    font-size: 1.4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: var(--var-c-secundary);
+}
+.Habilidad-ul{
+    width: 100%;
+}
+
+.Habilidad-li{
+    width: 100%;
+    text-align: start;
+    color: var(--var-c-textos);
+
+} 
+
+
+.Experiencia-section{
+    width: 100%;
+    max-width: 1900px;
+    background-color: var(--var-c-primary);
+
+    margin: 60px auto;
+}
+
+.Titulo-h3{
+    font-size: 1.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: var(--var-c-secundary);
+}
+
+/* Este es el ancla de la primera página */
+#Experiencia-wrapper{
+    width: 100%;
+    min-height: 5rem;
+    margin: 20px auto;
+}
+
+/* Ponemos en filas el emoticono y el texto */
+.Container-principal{
+    width: 100%;
+    min-height: 5rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Experiencia-img{
+    width: 6.25rem;
+    object-fit: cover;
+}
+
+/* Ponemos en fila las palabras con diferentes estilos */
+.Experiencia-textos{
+    width:  18.75rem;
+    min-height: 1.875rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.Mexico-p{
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    color: var(--var-c-textos);
+}
+
+.Mexico-p:first-child:hover{
+    color: green;
+}
+
+
+.Mexico-p:last-child:hover{
+    color: red;
+}
+
+/* Engloba los textos de inicio de la experiencia */
+.Titulo-div{
+    width: 70%;
+    min-height: 7.5rem;
+    margin: auto;
+}
+
+.Titulo-p{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+
+    color: var(--var-c-textos);
+}
+
+
+
+/* Empieza el wrapper del carrusel y textos */
+.Wrapper-div{
+    width: 95%;
+    min-height: 18.75rem;
+    background-color: var(--var-c-primary);
+
+    margin: auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.Principal-div{
+    width: 50%;
+    min-height: 18.75rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:center;
+    align-items: start;
+
+    text-align: start;
+
+    color: var(--var-c-primary);
+}
+
+.Texto-p{
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    text-align: start;
+
+    color: var(--var-c-secundary);
+}
+
+.Problemas-li{
+    color: var(--var-c-textos);
+}
+
+.Solucion-p{
+    width: 100%;
+    min-height: 1.25rem;
+
+    margin: auto;
+    color: var(--var-c-textos);
+}
+
+.Respuesta-p{
+    width: 80%;
+    font-size: 1em;
+    font-weight: 600;
+    
+    text-align: start;
+
+    color: var(--var-c-secundary);
+}
+
+/* le damos estilo al slider y le ponemos position relative */
+.Mexico-slider{
+    width: 50%;
+    position: relative;
+}
+
+.Slider-div{
+    width: 100%;
+    min-height: 24.0625rem;
+    
+    position: relative;
+}
+
+/* Vamos a utilizar la opacidad con JS */
+.Slider-img{
+    width: 100%;
+    height: 100%;
+    
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    object-fit: cover;
+}
+
+.isVisible{
+    opacity: 1;
+}
+
+/* Ponemos las flechas en posición absoluta encima de las imágenes */
+.Slider-arrow{
+    width: 2rem;
+    min-height: 2rem;
+    background-color:var(--var-c-primary);
+    border-radius: 44px;
+    
+    /* Colocados en mitad del slider */
+    position: absolute;
+    bottom: calc(50% - 2rem/2);
+
+    color: var(--var-c-secundary);
+
+    /* Lo ponemos para que aparezca la manita */
+    cursor: pointer;
+}
+
+.Slider-arrow--atras{
+    right: .625rem;
+}
+
+.Slider-arrow-alante{
+    left: .625rem;
+}
+
+.Slider-ul{
+    width: 100%;
+    min-height: 1rem;
+
+    margin: 10px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+}
+
+
+.Slider-button{
+    width: 1rem;
+    min-height: 1rem;
+    background-color:var(--var-c-secundary);
+
+    border-radius: 50%;
+    text-align: center;
+
+
+    color: #3b3b3b;
+    cursor: pointer;
+}
+
+/* Cuando el slider button sea active cambiamos de color */
+.isActive{
+    background-color: var(--var-c-secundary);
+}
+
+
+/* Comienza la ultima seccion */
+.Final-div{
+    width: 95%;
+    min-height: 50rem;
+
+    margin: 20px auto;
+}
+
+
+.Final-div{
+    width: 100%;
+    min-height: 6.25rem;
+
+    /* Le añadimos un padding para separar de la otra seccion */
+    padding: 4%;
+}
+
+.Final-h4{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+
+    font-size: 1.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: var(--var-c-secundary);
+}
+
+.Final-p{
+    text-align: center;
+    color: var(--var-c-textos);
+}
+
+/* Dentro del tooltip tenemos una lista de p */
+.Funciones-ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    cursor: pointer;
+
+    margin: 20px 0;
+
+    text-align: start;
+  
+}
+
+.Funcion-li{
+    width: 100%;
+    min-height: 3.75rem;
+
+    padding: 1.3%;
+    border-top: var(--var-c-textos) solid 2px;
+    text-align: start;
+
+    color: var(--var-c-textos);
+}
+
+.Tooltip-div{
+    width: 100%;
+    min-height: 21.875rem;
+
+    margin: auto;
+}
+
+/* Creamos el tooltip jugaremos con el opacity con JS */
+.Tooltip{
+    width: 16.75rem;
+    height: 10.5rem;
+    /* background: yellow; */
+
+    position: fixed;
+    top:-5.25rem;
+    left:-8.375rem;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+
+}
+
+.Tooltip.isVisible{
+    opacity: 1;
+}
+
+.Tooltip-img{
+    width: 18.75rem;
+    min-height: 9.375rem;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: opacity .3s ease;
+    transform: scale(1.5);
+
+    object-fit: cover;
+}
+
+.Tooltip-img.isVisible{
+    opacity: 1;
+}
+
+
+.Agradecimiento-div{
+    width: 100%;
+    min-height: 18.75rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;  
+
+    /* Le ponemos un delay de 20s calculando que es lo que tarda el usuario en bajar hasta abajo */
+    animation: slideUp 2s ease 20s both;
+}
+
+/* Hacemos una animación al bloque final desde abajo hasta su lugar*/
+@keyframes slideUp {
+    from{
+        transform: translateY(20%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+    
+}
+
+.Agradecimiento-h4{
+    width: 60%;
+    text-align: center;
+
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    text-align: center;
+
+    color: var(--var-c-secundary);
+}
+
+.Agradecimiento-p{
+    width: 60%;
+    text-align: center;
+    color: var(--var-c-textos);
+}
+
+.Agradecimiento-wrapper{
+    width: 60%;
+    min-height: 9.375rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Agradecimiento-img{
+    width: 6rem;
+}
+
+/* Le aplicamos propiedades distintas al ser horizontal*/
+.Agradecimiento-img--caribe{
+    width: 10rem;
+}
+
+
+/* ------------------------------------------- */
+/* Comienzo del .Footer
+Queremos que ocupe el 100% y le ponemos fixed */
+.Footer{
+    width: 100%;
+    min-height: 3.125rem;
+    background-color:var(--var-c-primary);
+
+    margin: auto;
+
+    opacity: 0.9;
+
+}
+
+/* Le ponemos al wrapper el mismo padding que el del contacto para alinear */
+.Footer-wrapper{
+    width: 100%;
+    min-height: 3.125rem;
+    /* background-color: firebrick; */
+
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Posicionamos las formas de contacto en una linea */
+.Footer-izquierda{
+    width: 20%;
+    min-height: 3.125rem; 
+    /* background-color:red; */
+
+    padding-right: 5%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+.Footer-a{
+    width: 200px;
+    min-height: 1.875rem;
+
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+
+    border-radius: 44px;
+
+    transition: 5s ease;
+
+    color: var(--var-c-textos);
+}
+
+.Footer-p{
+    color: var(--var-c-textos);
+}
+
+.Footer-a:hover{
+    flex-direction: row;
+}
+
+.Footer-p:hover{
+    color:var(--var-c-secundary);
+}
+
+/* Hace referencia a la flecha de hablemos */
+.Flecha-svg{
+    width: 1rem;
+    min-height: 1rem;
+    color: var(--var-c-secundary);
+}
+
+/* Hace referencia a las formas de contacto */
+.Footer-svg{
+    width: 1rem;
+    min-height: 1rem;
+    color: var(--var-c-textos);
+}
+
+.Footer-svg:hover{
+    color: var(--var-c-secundary);
+}
+
+/* Segundo bloque del footer: nav (centro)*/
+.Footer-nav{
+    width: 60%;
+    min-height: 3.125rem;
+    /* background-color:red; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Footer-ul{
+    width: 100%;
+    min-height: 3.125rem;
+    /* background: saddlebrown; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Le ponemos un 20% de width porque el espacio del 100% está repartido entre los elementos */
+.Footer-derecha{
+    width: 20%;
+    min-height: 3.125rem;
+    /* background-color: darkblue; */
+
+    margin: auto;
+    padding-left: 5%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+
+    font-size: .74em;
+
+    color: var(--var-c-textos);
+}
+
+.Cursor-web{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--var-c-secundary);
+
+    border-radius: 25%;
+
+    position: fixed;
+    top: -0.75rem;
+    left: -0.75rem;
+
+    pointer-events: none;
+  
+}
+
+
+
+@media (max-width: 1170px){
+    
+    .Habilidades-texto{
+        width: 100%;
+
+    }
+
+    .Habilidades.img{
+        width: 40%;
+    }
+
+    .Habilidad-ul{
+        padding-bottom: 10%;
+    }
+
+    .Wrapper-div{
+        flex-flow: column;
+    }
+
+    .Principal-div{
+        width: 100%;
+    }
+
+    .Mexico-slider{
+        width: 100%;
+    }
+
+    .Slider-div{
+        min-height: 600px;
+    }
+
+    .Slider-img{
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 1120px){
+    .Header-ul{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 930px){
+    .Header{
+        min-height: 6.25rem;
+        flex-flow: column nowrap;
+        justify-content: start;
+        align-items: start;
+    }
+    .Header-ul{
+        width: 100%;
+        flex-flow: column nowrap;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .Header-li{
+        width: 100%;
+    }
+
+
+    .Textos-div{
+        width: 100%;
+        min-height: 25rem;
+        background-image: url(../assets/linea.jpg);
+        background-position: top;
+        background-size: cover;
+
+    }
+
+    .Habilidades-grid{
+       
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Habilidades-primero{
+    
+        width: 100%;
+        min-height: 18.75rem;
+        grid: initial;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+
+        /* Le aplicamos una animación solo para resoluciones pequeñas */
+        animation: slideDown 2s ease 1 both;
+    }
+
+
+        @keyframes slideDown {
+            from{
+                transform: translateY(-100%);
+            }
+            to{
+                transform: translateY(0%);
+            }
+            
+        }
+
+    .Habilidades-texto{
+        width: 100%;
+        min-height: 12.5rem;
+        background-color: var(--var-c-primary);
+    }
+
+    .Habilidades-div{
+        display: none;
+    }
+
+    .Habilidad-ul{
+        width: 100%;
+        border-bottom: var(--var-c-secundary) solid 3px;
+    }
+
+    .Habilidad-li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .Habilidad-img{
+       display: none;
+       
+    }
+
+    .Wrapper-div{
+        flex-direction: column-reverse;
+    }
+    
+    .Slider-div{
+        min-height: 25rem;
+    }
+
+    .Textos{
+        min-height: 6.25rem;
+        margin: 20px 0 0 0;
+    }
+    
+    .Tooltip-img{
+        width: 9.375rem;
+        min-height: 20px;
+    }
+    
+    .Footer-nav{
+        display: none;
+    }
+
+    .Footer-derecha{
+        width: 80%;
+        justify-content: start;
+
+        padding: 0 0 0  5%;
+    }
+}
+
+

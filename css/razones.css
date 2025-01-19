@@ -1,0 +1,715 @@
+/* Primero vamos a eliminar propiedades que tienen por defecto algunas etiquetas con el reset/normalizador */
+*{
+    margin: 0rem;
+    padding: 0rem;
+    border: 0rem;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    color: var(--var-c-textos);
+}
+
+p a{
+    display: inline;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+Img , svg, video{
+    width: 100%;
+    height: inherit;
+    display: block;
+}
+
+svg{
+   fill: currentColor;
+}
+
+:root{
+    font-family: "Poppins", serif;
+    font-size: 1.1em;
+
+    --var-c-primary: #3b3b3b;
+    --var-c-secundary: #ede06b;
+    --var-c-textos: whitesmoke;
+
+}
+body{
+    hyphens: auto;
+    background-color: var(--var-c-primary);
+
+    margin: auto;
+    cursor: none;
+    
+}
+
+h1 , h2 , h3 , h4 , h5 , h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+form , input , textarea , label , select , buttom{
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    display: block;
+}
+/* Fin del reset */
+
+/* Comenzamos a dar propiedades a la caja contacto */
+.Contacto{
+    width: 100%;
+    min-height: 2.2rem;
+    background-color: #3b3b3b54;
+    
+    /* Vamos a darle un pequeño espacio por los lados para que quede el icono de linkedn como lo último en el contenido */
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    color: var(--var-c-textos);
+}
+.Contacto-div{
+    width: 100%;
+    min-height: 2.2rem;
+    max-width: 1900px;
+
+    margin: auto;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+.Contacto-svg{
+    width: 1rem;
+    min-height: 1rem;
+    color: var(--var-c-textos);
+}
+
+.Contacto-a{
+    text-align: end;
+}
+
+/* Cuando pasemos el cursor por encima cambia el color al secundario */
+.Contacto-svg:hover{
+    color: var(--var-c-secundary);
+}
+.Contacto-a:hover{
+    color: var(--var-c-secundary);
+}
+/* Termina seccion de contacto */
+
+/* Comienza el header */
+/* Le damos un padding de 50px para que esté ajustado con la foto*/
+.Header{
+    width: 95%;
+    min-height: 9.375rem;
+
+    margin: auto;
+
+    /* Colocamos en columna el logo y el nav */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: start;
+
+    animation: slideDown 2s ease 1 both;
+}
+
+/* El header tiene una animacion en vertical con ordenador */
+@keyframes slideDown {
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+    
+}
+
+
+/* Este es el logo del header */
+.Header-img{
+    width: 8rem;
+    min-height: 2rem;
+
+}
+
+.Header-nav{
+    width: 50%;
+    min-height: 20px;
+    max-width: 600px;
+}
+
+.Header-ul{
+    width: 100%;
+    min-height: 50px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:start;
+    align-items: start;
+    
+}
+
+.Header-li{
+    width: calc(100%/3);
+    text-align: start;
+}
+
+/* Aplicamos propiedades diferentes cuando estamos por encima */
+.Yo-a{
+    color:var(--var-c-textos);
+    font-weight: 400;
+}
+
+.Yo-a:hover{
+        color: var(--var-c-secundary);
+    }
+
+.Proyectos-a{
+    color:var(--var-c-textos);
+    font-weight: 400;
+}
+
+.Proyectos-a:hover{
+    color: var(--var-c-secundary);
+}
+
+.Razones-a{
+    color:var(--var-c-textos);
+    font-weight: 400;
+}
+
+.Razones-a:hover{
+    color: var(--var-c-secundary);
+}
+
+/* Comenzamos la parte principal de la página */
+.Main{
+    width: 100%;
+    background-color: var(--var-c-primary);
+}
+
+.Hero{
+    width: 100%;
+    min-height: 18.75rem;
+    margin: 0 0 50px 0;
+
+}
+
+.Hero-img{
+    width: 95%;
+    min-height: 18.75rem;
+    margin: auto;
+
+    /* le ponemos position relative porque los textos van a ir encima */
+    position: relative;
+
+    /* Le damos esta propiedad para que la imagen ocupe el espacio de la caja */
+    object-fit: cover;
+
+    opacity: 0.2;
+}
+
+
+.Hero-p--logros{
+    /* Los valores del position se han querido dar en esos valores en específico */
+    width: 70%;
+    position: absolute;
+    top: 30rem;
+    left: 20rem;
+
+    color:var(--var-c-secundary);
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.Hero-p--pasos{
+    /* Los valores del position se han querido dar en esos valores en específico */
+    width: 70%;
+    position: absolute;
+    top: 60rem;
+    left: 35rem;
+
+    color: var(--var-c-textos);
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    /* Los textos los posicionamos a la izquierda */
+    text-align: end;
+}
+/* Termina el hero */
+
+/* Comienza la seccion razones */
+.Razones-section{
+    width: 95%;
+    min-height: 50rem;
+    background-color: var(--var-c-primary);
+
+    margin: auto;
+}
+
+/* Le damos un margin auto para posicionarlo horizontalmente centrado */
+.Texto-div{
+    width: 40%;
+    margin: auto;
+
+    text-align: center;
+}
+
+.Titulo-p{
+    margin: auto;
+    color:var(--var-c-secundary);
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.Claim-h3{
+    padding: 20px 0;
+
+    color:var(--var-c-textos);
+    font-size: 1.3em;
+    font-weight: 900;
+}
+
+/* Comienza la seccion de grid */
+.Grid-div{
+    width: 95%;
+    min-height: 50rem;
+
+    margin: auto;
+}
+
+.Aspectos-grid{
+    width: 100%;
+    min-height: 50rem;
+    background-color: var(--var-c-primary);
+
+    margin: auto;
+
+}
+
+.Aspecto-grid{
+    width: 90%;
+    min-height: 9.375rem;
+    background-color: var(--var-c-primary);
+
+    margin: 40px auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+
+    /* Tiene este position por el position del numero */
+    position: relative;
+
+    /* Le damos un scale cuando estemos hover */
+    transition: scale 1s ease;
+}
+
+/* Añadimos propiedades para cuando el pongas el cursor por aspecto grid a otras etiquetas se le aplica algo */
+.Aspecto-grid:hover .Numero-grid{
+    transform: scale(1.3);
+    background-color:#3b3b3b65;
+}
+
+.Aspecto-grid:hover .Titulo-grid{
+    text-decoration: underline;
+    transform: translateX(300px);
+    background-color:#3b3b3b65;
+}
+
+
+.Numero-grid{
+    width: 5rem;
+    min-height: 5rem;
+
+    margin: auto;
+    /* lo posicionamos por encima de la etiqueta en valores específicos*/
+    position: absolute;
+    top: 80px;
+    right: 0;
+    z-index: 1;
+   
+
+    opacity: 0.2;
+    color: var(--var-c-secundary);
+
+    font-size: 8em;
+    font-weight: 600;
+
+}
+
+
+.Titulo-grid{
+    width: 100%;
+
+    font-size: 1.2em;
+    text-align: start;
+    padding: 10px;
+
+    color: var(--var-c-secundary);
+}
+
+.Desarrollo-p{
+    width: 100%;
+    padding: 20px;
+    text-align: start;
+
+    color: var(--var-c-textos);
+}
+
+/* Comienza la seccion cartas */
+.Cartas{
+    width: 100%;
+    min-height: 50rem;
+
+    /* Separamos de las demás secciones */
+    margin: 40px auto;
+}
+
+.Cartas-p{
+    width: 100%;
+    min-height: 9.375rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Las propiedades de los textos de su interior se configurar automaticamente al utilizar las mismas clases que la otra sección */
+
+.Cartas-div{
+    width: 95%;
+    min-height: 37.5rem;
+    background-color: var(--var-c-primary);
+
+    margin: 50px auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Carta-div{
+    width: calc(100% / 2);
+    min-height: 21.875rem;
+    background-color: var(--var-c-textos);
+
+    /* Aplicamos padding para que el texto tenga un espacio con la caja */
+    padding: 0 2%;
+    margin: auto;
+
+    /* Para que no se desconfigure el responsive aplicamos un border en vez de un gap */
+    border: var(--var-c-primary) solid 10px;
+
+    transition: scale 2s ease;
+}
+
+.Carta-div:hover{
+    transform: scale(1.03);
+}
+
+.Carta-p{
+    width: 100%;
+    color: var(--var-c-primary);
+}
+
+.Carta-final{
+    width: 100%;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+}
+
+.Cargo-p{
+    width: 60%;
+    color: var(--var-c-primary);
+    font-weight: 600;
+}
+
+.Empresa-img{
+    width: 4rem;
+    min-height: 4rem;
+    
+    /* Le damos un margin para separarlo de las otras cajas */
+    margin: 15px auto;
+}
+
+/* Esta empresa tiene características especiales ya que el logo es horizontal */
+.Empresa-img--mexico{
+    width: 10rem;
+}
+
+.Estrellas-img{
+    width: 6rem;
+    min-height: 2rem;
+
+    margin: 20px auto;
+}
+
+/* ------------------------------------------- */
+/* Comienzo del .Footer
+Queremos que ocupe el 100% y le ponemos fixed */
+.Footer{
+    width: 100%;
+    min-height: 50px;
+    background-color:var(--var-c-primary);
+
+    margin: auto;
+    padding: 0 3%;
+
+    opacity: 0.9;
+
+}
+
+.Footer-wrapper{
+    width: 100%;
+    min-height: 3.125rem;
+    /* background-color: firebrick; */
+
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Posicionamos las formas de contacto en una linea */
+.Footer-izquierda{
+    width: 20%;
+    min-height: 3.125rem; 
+    /* background-color:red; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+.Footer-a{
+    width: 12.5rem;
+    min-height: 1.875rem;
+
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+
+    border-radius: 44px;
+
+    color: var(--var-c-textos);
+}
+
+.Footer-p{
+    color: var(--var-c-textos);
+}
+
+.Footer-a:hover{
+    flex-direction: row;
+}
+
+.Footer-p:hover{
+    color:var(--var-c-secundary);
+}
+
+/* Hace referencia a la flecha de hablemos*/
+.Flecha-svg{
+    width: 1rem;
+    min-height: 1rem;
+    color: var(--var-c-secundary);
+}
+
+/* Hace referencia a las formas de contacto */
+.Footer-svg{
+    width: 1rem;
+    min-height: 1rem;
+    color: var(--var-c-textos);
+}
+
+.Footer-svg:hover{
+    color: var(--var-c-secundary);
+}
+
+/* Segundo bloque del footer: nav (centro)*/
+.Footer-nav{
+    width: 60%;
+    min-height: 3.125rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Footer-ul{
+    width: 100%;
+    min-height: 3.125rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Le ponemos un 20% de width porque el espacio del 100% está repartido entre los elementos */
+.Footer-derecha{
+    width: 20%;
+    min-height: 3.125rem;
+
+    margin: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+
+    font-size: .74em;
+
+    color: var(--var-c-textos);
+}
+
+.Cursor-web{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--var-c-secundary);
+
+    border-radius: 25%;
+
+    position: fixed;
+    top: -0.75rem;
+    left: -0.75rem;
+
+    pointer-events: none;
+  
+}
+
+@media (max-width: 900px){
+
+    .Footer-nav{
+        display: none;
+    }
+
+    .Footer-derecha{
+        width: 80%;
+        justify-content: start;
+    }
+
+    /* No lo he puesto en variable porque es algo puntual */
+    .Aspecto-grid{
+        background-color: #454545;
+    }
+}
+
+
+
+@media (max-width: 2080px){
+    .Hero-p--logros{
+        position: absolute;
+        top: 30rem;
+        left: 5rem;
+    }
+        
+
+    .Hero-p--pasos{
+        position: absolute;
+        top: 50rem;
+        left: 21rem;
+    }
+
+    .Contacto-div{
+        padding: 0 3%;
+    }
+}
+
+@media (max-width: 1120px){
+    .Header-nav{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px){
+    .Header-ul{
+       flex-flow: column wrap;
+       margin: 10px auto;
+    }
+
+    .Aspecto-grid{
+        padding: 0 0 2% 0;
+
+    }
+}
+
+
+@media (max-width: 1400px){
+    
+    .Cartas-p{
+        width: 100%;
+
+    }
+
+    .Carta-div{
+        width: 80%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 1550px){
+    .Razones-section{
+        padding: 2% 0 0 0;
+    }
+
+    .Texto-div{
+        width: 100%;
+        padding: 2% 0 0 0;
+    }
+
+    .Titulo-p{
+        width: 100%;
+        background-color: var(--var-c-primary);
+    }
+
+    .Hero-p{
+        width: 85%;
+        position: static;
+
+        margin: 20px auto;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: end;
+        align-items: end;
+
+        font-size: 1.4em;
+
+    }
+}
