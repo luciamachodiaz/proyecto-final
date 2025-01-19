@@ -233,6 +233,7 @@ buttom {
     max-width: 1350px;
     /* Ponemos un maxwidth determinado para que en pantallas grandes no se haga demasiado grande y para que el correo aparezca por el lado derecho de la seccion haciendo un efecto  */
     margin: auto;
+
 }
 
 .Textos-div {
@@ -246,18 +247,17 @@ buttom {
     flex-flow: column wrap;
     justify-content: center;
     align-content: center;
-
     animation: slideDown 2s ease 1 both;
 }
 
 
 @keyframes slideDown {
     from {
-        transform: translateY(-100%);
+        transform: translateX(-100%);
     }
 
     to {
-        transform: translateY(0%);
+        transform: translateX(0%);
     }
 
 }
@@ -293,6 +293,7 @@ buttom {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
 
 /* Hacemos referencia a la foto para que coja el alto y ancho de su contenedora */
 .Habilidad-img {
