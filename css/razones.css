@@ -1,40 +1,42 @@
 /* Primero vamos a eliminar propiedades que tienen por defecto algunas etiquetas con el reset/normalizador */
-*{
+* {
     margin: 0rem;
     padding: 0rem;
     border: 0rem;
     box-sizing: border-box;
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     display: block;
     text-decoration: none;
     color: var(--var-c-textos);
 }
 
-p a{
+p a {
     display: inline;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-Img , svg, video{
+Img,
+svg,
+video {
     width: 100%;
     height: inherit;
     display: block;
 }
 
-svg{
-   fill: currentColor;
+svg {
+    fill: currentColor;
 }
 
-:root{
+:root {
     font-family: "Poppins", serif;
     font-size: 1.1em;
 
@@ -43,34 +45,46 @@ svg{
     --var-c-textos: whitesmoke;
 
 }
-body{
+
+body {
     hyphens: auto;
     background-color: var(--var-c-primary);
 
     margin: auto;
     cursor: none;
-    
+
 }
 
-h1 , h2 , h3 , h4 , h5 , h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: inherit;
     font-weight: inherit;
 }
 
-form , input , textarea , label , select , buttom{
+form,
+input,
+textarea,
+label,
+select,
+buttom {
     font-family: inherit;
     font-size: inherit;
     background-color: transparent;
     display: block;
 }
+
 /* Fin del reset */
 
 /* Comenzamos a dar propiedades a la caja contacto */
-.Contacto{
+.Contacto {
     width: 100%;
     min-height: 2.2rem;
     background-color: #3b3b3b54;
-    
+
     /* Vamos a darle un pequeño espacio por los lados para que quede el icono de linkedn como lo último en el contenido */
     padding: 0 2%;
 
@@ -81,13 +95,14 @@ form , input , textarea , label , select , buttom{
 
     color: var(--var-c-textos);
 }
-.Contacto-div{
+
+.Contacto-div {
     width: 100%;
     min-height: 2.2rem;
     max-width: 1900px;
 
     margin: auto;
-    
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: end;
@@ -95,28 +110,30 @@ form , input , textarea , label , select , buttom{
     gap: 20px;
 }
 
-.Contacto-svg{
+.Contacto-svg {
     width: 1rem;
     min-height: 1rem;
     color: var(--var-c-textos);
 }
 
-.Contacto-a{
+.Contacto-a {
     text-align: end;
 }
 
 /* Cuando pasemos el cursor por encima cambia el color al secundario */
-.Contacto-svg:hover{
+.Contacto-svg:hover {
     color: var(--var-c-secundary);
 }
-.Contacto-a:hover{
+
+.Contacto-a:hover {
     color: var(--var-c-secundary);
 }
+
 /* Termina seccion de contacto */
 
 /* Comienza el header */
 /* Le damos un padding de 50px para que esté ajustado con la foto*/
-.Header{
+.Header {
     width: 100%;
     max-width: 1900px;
     min-height: 9.375rem;
@@ -134,79 +151,80 @@ form , input , textarea , label , select , buttom{
 
 /* El header tiene una animacion en vertical con ordenador */
 @keyframes slideDown {
-    from{
+    from {
         transform: translateY(-100%);
     }
-    to{
+
+    to {
         transform: translateY(0%);
     }
-    
+
 }
 
 
 /* Este es el logo del header */
-.Header-img{
+.Header-img {
     width: 8rem;
     min-height: 2rem;
 
 }
 
-.Header-nav{
+.Header-nav {
     width: 60%;
 
     padding: 0 5%;
 
     display: flex;
     flex-flow: row nowrap;
-    justify-content:end;
+    justify-content: end;
     align-items: end;
 }
 
-.Header-ul{
+.Header-ul {
     width: 100%;
 
     display: flex;
     flex-flow: row nowrap;
-    justify-content:start;
+    justify-content: start;
     align-items: start;
-    
+
 }
 
-.Header-li{
+.Header-li {
     width: calc(100%/3);
     text-align: end;
 }
 
 /* Aplicamos propiedades diferentes cuando estamos por encima */
-.Yo-a{
-    color:var(--var-c-textos);
+.Yo-a {
+    color: var(--var-c-textos);
     font-weight: 400;
 }
 
-.Yo-a:hover{
-        color: var(--var-c-secundary);
-    }
-
-.Proyectos-a{
-    color:var(--var-c-textos);
-    font-weight: 400;
-}
-
-.Proyectos-a:hover{
+.Yo-a:hover {
     color: var(--var-c-secundary);
 }
 
-.Razones-a{
-    color:var(--var-c-textos);
+.Proyectos-a {
+    color: var(--var-c-textos);
     font-weight: 400;
 }
 
-.Razones-a:hover{
+.Proyectos-a:hover {
+    color: var(--var-c-secundary);
+}
+
+.Razones-a {
+    color: var(--var-c-textos);
+    font-weight: 400;
+}
+
+.Razones-a:hover {
     color: var(--var-c-secundary);
 }
 
 /* Comenzamos la parte principal de la página */
-.Main{
+.Main {
     width: 100%;
     max-width: 1900px;
 
@@ -214,7 +232,7 @@ form , input , textarea , label , select , buttom{
     background-color: var(--var-c-primary);
 }
 
-.Hero{
+.Hero {
     width: 100%;
     min-height: 18.75rem;
     max-width: 1900px;
@@ -222,7 +240,7 @@ form , input , textarea , label , select , buttom{
 
 }
 
-.Hero-img{
+.Hero-img {
     width: 95%;
     min-height: 18.75rem;
     margin: auto;
@@ -234,20 +252,20 @@ form , input , textarea , label , select , buttom{
 }
 
 
-.Hero-p--logros{
+.Hero-p--logros {
     /* Los valores del position se han querido dar en esos valores en específico */
     width: 70%;
 
-    color:var(--var-c-secundary);
+    color: var(--var-c-secundary);
     font-size: 2em;
     font-weight: 600;
     text-transform: uppercase;
 
-      /* El texto lo posicionamos a la izquierda */
-      text-align: center;
+    /* El texto lo posicionamos a la izquierda */
+    text-align: center;
 }
 
-.Hero-p--pasos{
+.Hero-p--pasos {
     /* Los valores del position se han querido dar en esos valores en específico */
     width: 70%;
 
@@ -259,10 +277,11 @@ form , input , textarea , label , select , buttom{
     /* El texto lo posicionamos a la izquierda */
     text-align: end;
 }
+
 /* Termina el hero */
 
 /* Comienza la seccion razones */
-.Razones-section{
+.Razones-section {
     width: 95%;
     min-height: 50rem;
     background-color: var(--var-c-primary);
@@ -271,39 +290,39 @@ form , input , textarea , label , select , buttom{
 }
 
 /* Le damos un margin auto para posicionarlo horizontalmente centrado */
-.Texto-div{
+.Texto-div {
     width: 40%;
     margin: auto;
 
     text-align: center;
 }
 
-.Titulo-p{
+.Titulo-p {
     margin: auto;
-    color:var(--var-c-secundary);
+    color: var(--var-c-secundary);
     font-size: 1.5em;
     font-weight: 900;
     text-align: center;
     text-transform: uppercase;
 }
 
-.Claim-h3{
+.Claim-h3 {
     padding: 20px 0;
 
-    color:var(--var-c-textos);
+    color: var(--var-c-textos);
     font-size: 1.3em;
     font-weight: 900;
 }
 
 /* Comienza la seccion de grid */
-.Grid-div{
+.Grid-div {
     width: 95%;
     min-height: 50rem;
 
     margin: auto;
 }
 
-.Aspectos-grid{
+.Aspectos-grid {
     width: 100%;
     min-height: 50rem;
     background-color: var(--var-c-primary);
@@ -312,7 +331,7 @@ form , input , textarea , label , select , buttom{
 
 }
 
-.Aspecto-grid{
+.Aspecto-grid {
     width: 90%;
     min-height: 9.375rem;
     background-color: var(--var-c-primary);
@@ -331,19 +350,19 @@ form , input , textarea , label , select , buttom{
 
 
 /* Añadimos propiedades para cuando el pongas el cursor por aspecto grid a otras etiquetas se le aplica algo */
-.Aspecto-grid:hover .Numero-grid{
+.Aspecto-grid:hover .Numero-grid {
     transform: scale(1.3);
-    background-color:#3b3b3b65;
+    background-color: #3b3b3b65;
 }
 
-.Aspecto-grid:hover .Titulo-grid{
+.Aspecto-grid:hover .Titulo-grid {
     text-decoration: underline;
     transform: translateX(300px);
-    background-color:#3b3b3b65;
+    background-color: #3b3b3b65;
 }
 
 
-.Numero-grid{
+.Numero-grid {
     width: 5rem;
     min-height: 5rem;
 
@@ -353,7 +372,7 @@ form , input , textarea , label , select , buttom{
     top: 80px;
     right: 0;
     z-index: 1;
-   
+
 
     opacity: 0.2;
     color: var(--var-c-secundary);
@@ -366,19 +385,20 @@ form , input , textarea , label , select , buttom{
 }
 
 
-    @keyframes slideDown {
-        from{
-            transform: translateY(-100%);
-        }
-        to{
-            transform: translateY(0%);
-        }
-        
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
     }
 
+    to {
+        transform: translateY(0%);
+    }
+
+}
 
 
-.Titulo-grid{
+
+.Titulo-grid {
     width: 100%;
 
     font-size: 1.2em;
@@ -388,7 +408,7 @@ form , input , textarea , label , select , buttom{
     color: var(--var-c-secundary);
 }
 
-.Desarrollo-p{
+.Desarrollo-p {
     width: 100%;
     padding: 20px;
     text-align: start;
@@ -397,7 +417,7 @@ form , input , textarea , label , select , buttom{
 }
 
 /* Comienza la seccion cartas */
-.Cartas{
+.Cartas {
     width: 100%;
     min-height: 50rem;
 
@@ -405,7 +425,7 @@ form , input , textarea , label , select , buttom{
     margin: 40px auto;
 }
 
-.Cartas-p{
+.Cartas-p {
     width: 100%;
     min-height: 9.375rem;
 
@@ -417,7 +437,7 @@ form , input , textarea , label , select , buttom{
 
 /* Las propiedades de los textos de su interior se configurar automaticamente al utilizar las mismas clases que la otra sección */
 
-.Cartas-div{
+.Cartas-div {
     width: 95%;
     min-height: 37.5rem;
     background-color: var(--var-c-primary);
@@ -430,7 +450,7 @@ form , input , textarea , label , select , buttom{
     align-items: center;
 }
 
-.Carta-div{
+.Carta-div {
     width: calc(100% / 2);
     min-height: 21.875rem;
     background-color: var(--var-c-textos);
@@ -445,44 +465,44 @@ form , input , textarea , label , select , buttom{
     transition: scale 2s ease;
 }
 
-.Carta-div:hover{
+.Carta-div:hover {
     transform: scale(1.03);
 }
 
-.Carta-p{
+.Carta-p {
     width: 100%;
     color: var(--var-c-primary);
 }
 
-.Carta-final{
+.Carta-final {
     width: 100%;
-    
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: end;
     align-items: center;
 }
 
-.Cargo-p{
+.Cargo-p {
     width: 60%;
     color: var(--var-c-primary);
     font-weight: 600;
 }
 
-.Empresa-img{
+.Empresa-img {
     width: 4rem;
     min-height: 4rem;
-    
+
     /* Le damos un margin para separarlo de las otras cajas */
     margin: 15px auto;
 }
 
 /* Esta empresa tiene características especiales ya que el logo es horizontal */
-.Empresa-img--mexico{
+.Empresa-img--mexico {
     width: 10rem;
 }
 
-.Estrellas-img{
+.Estrellas-img {
     width: 6rem;
     min-height: 2rem;
 
@@ -492,10 +512,10 @@ form , input , textarea , label , select , buttom{
 /* ------------------------------------------- */
 /* Comienzo del .Footer
 Queremos que ocupe el 100% y le ponemos fixed */
-.Footer{
+.Footer {
     width: 100%;
     min-height: 50px;
-    background-color:var(--var-c-primary);
+    background-color: var(--var-c-primary);
 
     margin: auto;
     padding: 0 3%;
@@ -504,7 +524,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
 
 }
 
-.Footer-wrapper{
+.Footer-wrapper {
     width: 100%;
     min-height: 3.125rem;
     max-width: 1900px;
@@ -516,13 +536,13 @@ Queremos que ocupe el 100% y le ponemos fixed */
     flex-flow: row-reverse nowrap;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 /* Posicionamos las formas de contacto en una linea */
-.Footer-izquierda{
+.Footer-izquierda {
     width: 20%;
-    min-height: 3.125rem; 
+    min-height: 3.125rem;
     /* background-color:red; */
 
     display: flex;
@@ -532,7 +552,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
     gap: 20px;
 }
 
-.Footer-a{
+.Footer-a {
     width: 12.5rem;
     min-height: 1.875rem;
 
@@ -547,38 +567,38 @@ Queremos que ocupe el 100% y le ponemos fixed */
     color: var(--var-c-textos);
 }
 
-.Footer-p{
+.Footer-p {
     color: var(--var-c-textos);
 }
 
-.Footer-a:hover{
+.Footer-a:hover {
     flex-direction: row;
 }
 
-.Footer-p:hover{
-    color:var(--var-c-secundary);
+.Footer-p:hover {
+    color: var(--var-c-secundary);
 }
 
 /* Hace referencia a la flecha de hablemos*/
-.Flecha-svg{
+.Flecha-svg {
     width: 1rem;
     min-height: 1rem;
     color: var(--var-c-secundary);
 }
 
 /* Hace referencia a las formas de contacto */
-.Footer-svg{
+.Footer-svg {
     width: 1rem;
     min-height: 1rem;
     color: var(--var-c-textos);
 }
 
-.Footer-svg:hover{
+.Footer-svg:hover {
     color: var(--var-c-secundary);
 }
 
 /* Segundo bloque del footer: nav (centro)*/
-.Footer-nav{
+.Footer-nav {
     width: 60%;
     min-height: 3.125rem;
 
@@ -589,7 +609,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
 
 }
 
-.Footer-ul{
+.Footer-ul {
     width: 100%;
     min-height: 3.125rem;
 
@@ -601,7 +621,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
 }
 
 /* Le ponemos un 20% de width porque el espacio del 100% está repartido entre los elementos */
-.Footer-derecha{
+.Footer-derecha {
     width: 20%;
     min-height: 3.125rem;
 
@@ -617,7 +637,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
     color: var(--var-c-textos);
 }
 
-.Cursor-web{
+.Cursor-web {
     width: 1.5rem;
     height: 1.5rem;
     background-color: var(--var-c-secundary);
@@ -629,92 +649,92 @@ Queremos que ocupe el 100% y le ponemos fixed */
     left: -0.75rem;
 
     pointer-events: none;
-  
+
 }
 
 /* Quitamos en modo tablet para abajo el cursor */
-@media (max-width: 1024px){
-    .Cursor-web{
+@media (max-width: 1024px) {
+    .Cursor-web {
         display: none;
     }
 }
 
 /* Le damos diferentes propiedades según los breakpoints */
-@media (max-width: 900px){
+@media (max-width: 900px) {
 
-    .Footer-nav{
+    .Footer-nav {
         display: none;
     }
 
-    .Footer-derecha{
+    .Footer-derecha {
         width: 80%;
         justify-content: start;
     }
 
     /* No lo he puesto en variable porque es algo puntual */
-    .Aspecto-grid{
+    .Aspecto-grid {
         background-color: #454545;
     }
 }
 
 
 
-@media (max-width: 2080px){
+@media (max-width: 2080px) {
 
-    .Contacto-div{
+    .Contacto-div {
         padding: 0 3%;
     }
 }
 
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
 
-    .Aspecto-grid{
+    .Aspecto-grid {
         padding: 0 0 2% 0;
 
     }
 }
 
 
-@media (max-width: 1400px){
-    .Header-ul{
+@media (max-width: 1400px) {
+    .Header-ul {
         width: 100%;
         flex-flow: column nowrap;
     }
 
-    .Header-li{
+    .Header-li {
         width: 100%;
         text-align: end;
     }
 
-    
-    .Cartas-p{
+
+    .Cartas-p {
         width: 100%;
 
     }
 
-    .Carta-div{
+    .Carta-div {
         width: 80%;
         margin: 10px;
     }
 }
 
-@media (max-width: 1550px){
-    .Razones-section{
+@media (max-width: 1550px) {
+    .Razones-section {
         padding: 2% 0 0 0;
     }
 
-    .Texto-div{
+    .Texto-div {
         width: 100%;
         padding: 2% 0 0 0;
     }
 
-    .Titulo-p{
+    .Titulo-p {
         width: 100%;
         background-color: var(--var-c-primary);
     }
 
-    .Hero-p{
+    .Hero-p {
         width: 85%;
         position: static;
 

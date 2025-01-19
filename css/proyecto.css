@@ -1,40 +1,42 @@
 /* Primero vamos a eliminar propiedades que tienen por defecto algunas etiquetas con el reset/normalizador */
-*{
+* {
     margin: 0rem;
     padding: 0rem;
     border: 0rem;
     box-sizing: border-box;
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     display: block;
     text-decoration: none;
     color: var(--var-c-textos);
 }
 
-p a{
+p a {
     display: inline;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-Img , svg, video{
+Img,
+svg,
+video {
     width: 100%;
     height: inherit;
     display: block;
 }
 
-svg{
-   fill: currentColor;
+svg {
+    fill: currentColor;
 }
 
-:root{
+:root {
     font-family: "Poppins", serif;
     font-size: 1.1em;
 
@@ -43,34 +45,46 @@ svg{
     --var-c-textos: whitesmoke;
 
 }
-body{
+
+body {
     hyphens: auto;
     background-color: var(--var-c-primary);
 
     margin: auto;
     cursor: none;
-    
+
 }
 
-h1 , h2 , h3 , h4 , h5 , h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: inherit;
     font-weight: inherit;
 }
 
-form , input , textarea , label , select , buttom{
+form,
+input,
+textarea,
+label,
+select,
+buttom {
     font-family: inherit;
     font-size: inherit;
     background-color: transparent;
     display: block;
 }
+
 /* Fin del reset */
 
 /* Comenzamos a dar propiedades a la caja contacto */
-.Contacto{
+.Contacto {
     width: 100%;
     min-height: 2.2rem;
     background-color: #3b3b3b54;
-    
+
     padding: 0 2%;
 
     position: fixed;
@@ -80,15 +94,16 @@ form , input , textarea , label , select , buttom{
 
     color: var(--var-c-textos);
 }
-.Contacto-div{
+
+.Contacto-div {
     width: 100%;
     min-height: 2.2rem;
-    
+
     /* En esta sección pondremos ese maxwidth porque el diseño lo permite para que el correo este visible en la primera seccion en pantallas grandes*/
     max-width: 1900px;
 
     margin: auto;
-    
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: end;
@@ -96,28 +111,29 @@ form , input , textarea , label , select , buttom{
     gap: 20px;
 }
 
-.Contacto-svg{
+.Contacto-svg {
     width: 1rem;
     min-height: 1rem;
     color: var(--var-c-textos);
 }
 
-.Contacto-a{
+.Contacto-a {
     text-align: end;
 }
 
 /* Cuando pasemos el cursor por encima cambia el color al secundario */
-.Contacto-svg:hover{
+.Contacto-svg:hover {
     color: var(--var-c-secundary);
 }
-.Contacto-a:hover{
+
+.Contacto-a:hover {
     color: var(--var-c-secundary);
 }
+
 /* Termina seccion de contacto */
 
 /* Comienza el header */
-/* Le damos un padding de 50px para que esté ajustado con la foto*/
-.Header{
+.Header {
     width: 100%;
     min-height: 9.375rem;
     max-width: 1900px;
@@ -135,88 +151,91 @@ form , input , textarea , label , select , buttom{
 
 /* El header tiene una animacion en vertical con ordenador */
 @keyframes slideDown {
-    from{
+    from {
         transform: translateY(-100%);
     }
-    to{
+
+    to {
         transform: translateY(0%);
     }
-    
+
 }
+
 /* Este es el logo del header */
-.Header-img{
+.Header-img {
     width: 8rem;
     min-height: 2rem;
 
 }
 
-.Header-nav{
+.Header-nav {
     width: 60%;
 
     padding: 0 5%;
 
     display: flex;
     flex-flow: row nowrap;
-    justify-content:end;
+    justify-content: end;
     align-items: end;
 }
 
-.Header-ul{
+.Header-ul {
     width: 100%;
 
     display: flex;
     flex-flow: row nowrap;
-    justify-content:start;
+    justify-content: start;
     align-items: start;
-    
+
 }
 
-.Header-li{
+.Header-li {
     width: calc(100%/3);
     text-align: end;
 }
 
 /* Aplicamos propiedades diferentes cuando estamos por encima */
-.Yo-a{
-    color:var(--var-c-textos);
+.Yo-a {
+    color: var(--var-c-textos);
     font-weight: 400;
 }
 
-.Yo-a:hover{
-        color: var(--var-c-secundary);
-    }
-
-.Proyectos-a{
-    color:var(--var-c-textos);
-    font-weight: 400;
-}
-
-.Proyectos-a:hover{
+.Yo-a:hover {
     color: var(--var-c-secundary);
 }
 
-.Razones-a{
-    color:var(--var-c-textos);
+.Proyectos-a {
+    color: var(--var-c-textos);
     font-weight: 400;
 }
 
-.Razones-a:hover{
+.Proyectos-a:hover {
     color: var(--var-c-secundary);
 }
+
+.Razones-a {
+    color: var(--var-c-textos);
+    font-weight: 400;
+}
+
+.Razones-a:hover {
+    color: var(--var-c-secundary);
+}
+
 /* ------------------------------------------------------------------------------------ */
 
-.Main{
+.Main {
     width: 100%;
 }
 
-.Habilidades-grid{
+.Habilidades-grid {
     width: 95%;
     max-width: 1350px;
-    /* Ponemos un maxwidth determinado para que en pantallas grandes no se haga demasiado grande */
+    /* Ponemos un maxwidth determinado para que en pantallas grandes no se haga demasiado grande y para que el correo aparezca por el lado derecho de la seccion haciendo un efecto  */
     margin: auto;
 }
 
-.Textos-div{
+.Textos-div {
     width: 100%;
     min-height: 12.5rem;
     background: var(--var-c-primary);
@@ -227,24 +246,25 @@ form , input , textarea , label , select , buttom{
     flex-flow: column wrap;
     justify-content: center;
     align-content: center;
-    
+
     animation: slideDown 2s ease 1 both;
 }
 
 
-    @keyframes slideDown {
-        from{
-            transform: translateY(-100%);
-        }
-        to{
-            transform: translateY(0%);
-        }
-        
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
     }
 
+    to {
+        transform: translateY(0%);
+    }
+
+}
 
 
-#Titulo-h3{
+
+#Titulo-h3 {
     font-size: 1.5em;
     font-weight: 900;
     text-transform: uppercase;
@@ -253,7 +273,7 @@ form , input , textarea , label , select , buttom{
     color: var(--var-c-secundary);
 }
 
-.Roles-p{
+.Roles-p {
     width: 100%;
     min-height: 3.125rem;
 
@@ -263,27 +283,27 @@ form , input , textarea , label , select , buttom{
     text-align: center;
     text-transform: uppercase;
 
-    
+
     color: var(--var-c-textos);
 }
 
 
 /* Dividimos los bloques en 3 columnas */
-.Habilidades-primero{
-    display: grid; 
+.Habilidades-primero {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
 /* Hacemos referencia a la foto para que coja el alto y ancho de su contenedora */
-.Habilidad-img{
+.Habilidad-img {
     width: 100%;
     height: 100%;
-   
+
     object-fit: cover;
 }
 
 
-.Habilidades-texto{
+.Habilidades-texto {
     width: 100%;
     /* No lo he puesto en variable porque es una ocasión especial */
     background-color: rgba(245, 245, 245, 0.075);
@@ -299,7 +319,7 @@ form , input , textarea , label , select , buttom{
 
 }
 
-.Habilidad-p{
+.Habilidad-p {
     width: 50%;
     min-height: 3.125rem;
     margin: auto;
@@ -311,19 +331,20 @@ form , input , textarea , label , select , buttom{
 
     color: var(--var-c-secundary);
 }
-.Habilidad-ul{
+
+.Habilidad-ul {
     width: 100%;
 }
 
-.Habilidad-li{
+.Habilidad-li {
     width: 100%;
     text-align: start;
     color: var(--var-c-textos);
 
-} 
+}
 
-
-.Experiencia-section{
+/* Las demás secciones tienen en mismo max width */
+.Experiencia-section {
     width: 100%;
     max-width: 1900px;
     background-color: var(--var-c-primary);
@@ -331,7 +352,7 @@ form , input , textarea , label , select , buttom{
     margin: 60px auto;
 }
 
-.Titulo-h3{
+.Titulo-h3 {
     font-size: 1.5em;
     font-weight: 900;
     text-transform: uppercase;
@@ -341,14 +362,14 @@ form , input , textarea , label , select , buttom{
 }
 
 /* Este es el ancla de la primera página */
-#Experiencia-wrapper{
+#Experiencia-wrapper {
     width: 100%;
     min-height: 5rem;
     margin: 20px auto;
 }
 
 /* Ponemos en filas el emoticono y el texto */
-.Container-principal{
+.Container-principal {
     width: 100%;
     min-height: 5rem;
 
@@ -359,14 +380,14 @@ form , input , textarea , label , select , buttom{
 }
 
 
-.Experiencia-img{
+.Experiencia-img {
     width: 6.25rem;
     object-fit: cover;
 }
 
 /* Ponemos en fila las palabras con diferentes estilos */
-.Experiencia-textos{
-    width:  18.75rem;
+.Experiencia-textos {
+    width: 18.75rem;
     min-height: 1.875rem;
 
     display: flex;
@@ -376,32 +397,32 @@ form , input , textarea , label , select , buttom{
     gap: 10px;
 }
 
-.Mexico-p{
+.Mexico-p {
     font-size: 1.3em;
     text-align: center;
     font-weight: 600;
     text-transform: uppercase;
-    
+
     color: var(--var-c-textos);
 }
 
-.Mexico-p:first-child:hover{
+.Mexico-p:first-child:hover {
     color: green;
 }
 
 
-.Mexico-p:last-child:hover{
+.Mexico-p:last-child:hover {
     color: red;
 }
 
 /* Engloba los textos de inicio de la experiencia */
-.Titulo-div{
+.Titulo-div {
     width: 70%;
     min-height: 7.5rem;
     margin: auto;
 }
 
-.Titulo-p{
+.Titulo-p {
     width: 95%;
     margin: auto;
     text-align: center;
@@ -409,10 +430,8 @@ form , input , textarea , label , select , buttom{
     color: var(--var-c-textos);
 }
 
-
-
 /* Empieza el wrapper del carrusel y textos */
-.Wrapper-div{
+.Wrapper-div {
     width: 95%;
     min-height: 18.75rem;
     background-color: var(--var-c-primary);
@@ -426,13 +445,13 @@ form , input , textarea , label , select , buttom{
     gap: 25px;
 }
 
-.Principal-div{
+.Principal-div {
     width: 50%;
     min-height: 18.75rem;
 
     display: flex;
     flex-flow: column nowrap;
-    justify-content:center;
+    justify-content: center;
     align-items: start;
 
     text-align: start;
@@ -440,22 +459,22 @@ form , input , textarea , label , select , buttom{
     color: var(--var-c-primary);
 }
 
-.Texto-p{
+.Texto-p {
     width: 100%;
     font-size: 1.5em;
     font-weight: 600;
     text-transform: uppercase;
-    
+
     text-align: start;
 
     color: var(--var-c-secundary);
 }
 
-.Problemas-li{
+.Problemas-li {
     color: var(--var-c-textos);
 }
 
-.Solucion-p{
+.Solucion-p {
     width: 100%;
     min-height: 1.25rem;
 
@@ -463,37 +482,37 @@ form , input , textarea , label , select , buttom{
     color: var(--var-c-textos);
 }
 
-.Respuesta-p{
+.Respuesta-p {
     width: 80%;
     font-size: 1em;
     font-weight: 600;
-    
+
     text-align: start;
 
     color: var(--var-c-secundary);
 }
 
 /* le damos estilo al slider y le ponemos position relative */
-.Mexico-slider{
+.Mexico-slider {
     width: 50%;
     position: relative;
 }
 
-.Slider-div{
+.Slider-div {
     width: 100%;
     min-height: 24.0625rem;
-    
+
     position: relative;
 }
 
 /* Vamos a utilizar la opacidad con JS */
-.Slider-img{
+.Slider-img {
     width: 100%;
     height: 100%;
-    
+
     opacity: 0;
     transition: opacity 0.5s ease;
-    
+
     position: absolute;
     top: 0;
     left: 0;
@@ -501,17 +520,17 @@ form , input , textarea , label , select , buttom{
     object-fit: cover;
 }
 
-.isVisible{
+.isVisible {
     opacity: 1;
 }
 
 /* Ponemos las flechas en posición absoluta encima de las imágenes */
-.Slider-arrow{
+.Slider-arrow {
     width: 2rem;
     min-height: 2rem;
-    background-color:var(--var-c-primary);
+    background-color: var(--var-c-primary);
     border-radius: 44px;
-    
+
     /* Colocados en mitad del slider */
     position: absolute;
     bottom: calc(50% - 2rem/2);
@@ -522,15 +541,15 @@ form , input , textarea , label , select , buttom{
     cursor: pointer;
 }
 
-.Slider-arrow--atras{
+.Slider-arrow--atras {
     right: .625rem;
 }
 
-.Slider-arrow-alante{
+.Slider-arrow-alante {
     left: .625rem;
 }
 
-.Slider-ul{
+.Slider-ul {
     width: 100%;
     min-height: 1rem;
 
@@ -545,10 +564,10 @@ form , input , textarea , label , select , buttom{
 }
 
 
-.Slider-button{
+.Slider-button {
     width: 1rem;
     min-height: 1rem;
-    background-color:var(--var-c-secundary);
+    background-color: var(--var-c-secundary);
 
     border-radius: 50%;
     text-align: center;
@@ -559,21 +578,22 @@ form , input , textarea , label , select , buttom{
 }
 
 /* Cuando el slider button sea active cambiamos de color */
-.isActive{
+.isActive {
     background-color: var(--var-c-secundary);
 }
 
 
 /* Comienza la ultima seccion */
-.Final-div{
+.Final-div {
     width: 95%;
     min-height: 50rem;
+    max-width: 1900px;
 
     margin: 20px auto;
 }
 
 
-.Final-div{
+.Final-div {
     width: 100%;
     min-height: 6.25rem;
 
@@ -581,7 +601,7 @@ form , input , textarea , label , select , buttom{
     padding: 4%;
 }
 
-.Final-h4{
+.Final-h4 {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -595,13 +615,13 @@ form , input , textarea , label , select , buttom{
     color: var(--var-c-secundary);
 }
 
-.Final-p{
+.Final-p {
     text-align: center;
     color: var(--var-c-textos);
 }
 
 /* Dentro del tooltip tenemos una lista de p */
-.Funciones-ul{
+.Funciones-ul {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -613,10 +633,10 @@ form , input , textarea , label , select , buttom{
     margin: 20px 0;
 
     text-align: start;
-  
+
 }
 
-.Funcion-li{
+.Funcion-li {
     width: 100%;
     min-height: 3.75rem;
 
@@ -627,7 +647,7 @@ form , input , textarea , label , select , buttom{
     color: var(--var-c-textos);
 }
 
-.Tooltip-div{
+.Tooltip-div {
     width: 100%;
     min-height: 21.875rem;
 
@@ -635,14 +655,14 @@ form , input , textarea , label , select , buttom{
 }
 
 /* Creamos el tooltip jugaremos con el opacity con JS */
-.Tooltip{
+.Tooltip {
     width: 16.75rem;
     height: 10.5rem;
     /* background: yellow; */
 
     position: fixed;
-    top:-5.25rem;
-    left:-8.375rem;
+    top: -5.25rem;
+    left: -8.375rem;
 
     opacity: 0;
     pointer-events: none;
@@ -650,14 +670,14 @@ form , input , textarea , label , select , buttom{
 
 }
 
-.Tooltip.isVisible{
+.Tooltip.isVisible {
     opacity: 1;
 }
 
-.Tooltip-img{
+.Tooltip-img {
     width: 18.75rem;
     min-height: 9.375rem;
-    
+
     position: absolute;
     top: 0;
     left: 0;
@@ -669,12 +689,12 @@ form , input , textarea , label , select , buttom{
     object-fit: cover;
 }
 
-.Tooltip-img.isVisible{
+.Tooltip-img.isVisible {
     opacity: 1;
 }
 
 
-.Agradecimiento-div{
+.Agradecimiento-div {
     width: 100%;
     min-height: 18.75rem;
 
@@ -682,7 +702,7 @@ form , input , textarea , label , select , buttom{
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    gap: 15px;  
+    gap: 15px;
 
     /* Le ponemos un delay de 20s calculando que es lo que tarda el usuario en bajar hasta abajo */
     animation: slideUp 2s ease 20s both;
@@ -690,35 +710,36 @@ form , input , textarea , label , select , buttom{
 
 /* Hacemos una animación al bloque final desde abajo hasta su lugar*/
 @keyframes slideUp {
-    from{
+    from {
         transform: translateY(20%);
     }
-    to{
+
+    to {
         transform: translateY(0%);
     }
-    
+
 }
 
-.Agradecimiento-h4{
+.Agradecimiento-h4 {
     width: 60%;
     text-align: center;
 
     font-size: 1.2em;
     font-weight: 600;
     text-transform: uppercase;
-    
+
     text-align: center;
 
     color: var(--var-c-secundary);
 }
 
-.Agradecimiento-p{
+.Agradecimiento-p {
     width: 60%;
     text-align: center;
     color: var(--var-c-textos);
 }
 
-.Agradecimiento-wrapper{
+.Agradecimiento-wrapper {
     width: 60%;
     min-height: 9.375rem;
 
@@ -728,12 +749,12 @@ form , input , textarea , label , select , buttom{
     align-items: center;
 }
 
-.Agradecimiento-img{
+.Agradecimiento-img {
     width: 6rem;
 }
 
 /* Le aplicamos propiedades distintas al ser horizontal*/
-.Agradecimiento-img--caribe{
+.Agradecimiento-img--caribe {
     width: 10rem;
 }
 
@@ -741,10 +762,10 @@ form , input , textarea , label , select , buttom{
 /* ------------------------------------------- */
 /* Comienzo del .Footer
 Queremos que ocupe el 100% y le ponemos fixed */
-.Footer{
+.Footer {
     width: 100%;
     min-height: 3.125rem;
-    background-color:var(--var-c-primary);
+    background-color: var(--var-c-primary);
 
     margin: auto;
 
@@ -753,7 +774,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
 }
 
 /* Le ponemos al wrapper el mismo padding que el del contacto para alinear */
-.Footer-wrapper{
+.Footer-wrapper {
     width: 100%;
     min-height: 3.125rem;
     max-width: 1900px;
@@ -765,13 +786,13 @@ Queremos que ocupe el 100% y le ponemos fixed */
     flex-flow: row-reverse nowrap;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 /* Posicionamos las formas de contacto en una linea */
-.Footer-izquierda{
+.Footer-izquierda {
     width: 20%;
-    min-height: 3.125rem; 
+    min-height: 3.125rem;
     /* background-color:red; */
 
     padding-right: 5%;
@@ -782,7 +803,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
     gap: 20px;
 }
 
-.Footer-a{
+.Footer-a {
     width: 200px;
     min-height: 1.875rem;
 
@@ -799,38 +820,38 @@ Queremos que ocupe el 100% y le ponemos fixed */
     color: var(--var-c-textos);
 }
 
-.Footer-p{
+.Footer-p {
     color: var(--var-c-textos);
 }
 
-.Footer-a:hover{
+.Footer-a:hover {
     flex-direction: row;
 }
 
-.Footer-p:hover{
-    color:var(--var-c-secundary);
+.Footer-p:hover {
+    color: var(--var-c-secundary);
 }
 
 /* Hace referencia a la flecha de hablemos */
-.Flecha-svg{
+.Flecha-svg {
     width: 1rem;
     min-height: 1rem;
     color: var(--var-c-secundary);
 }
 
 /* Hace referencia a las formas de contacto */
-.Footer-svg{
+.Footer-svg {
     width: 1rem;
     min-height: 1rem;
     color: var(--var-c-textos);
 }
 
-.Footer-svg:hover{
+.Footer-svg:hover {
     color: var(--var-c-secundary);
 }
 
 /* Segundo bloque del footer: nav (centro)*/
-.Footer-nav{
+.Footer-nav {
     width: 60%;
     min-height: 3.125rem;
     /* background-color:red; */
@@ -842,7 +863,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
 
 }
 
-.Footer-ul{
+.Footer-ul {
     width: 100%;
     min-height: 3.125rem;
     /* background: saddlebrown; */
@@ -855,7 +876,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
 }
 
 /* Le ponemos un 20% de width porque el espacio del 100% está repartido entre los elementos */
-.Footer-derecha{
+.Footer-derecha {
     width: 20%;
     min-height: 3.125rem;
     /* background-color: darkblue; */
@@ -873,7 +894,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
     color: var(--var-c-textos);
 }
 
-.Cursor-web{
+.Cursor-web {
     width: 1.5rem;
     height: 1.5rem;
     background-color: var(--var-c-secundary);
@@ -885,117 +906,118 @@ Queremos que ocupe el 100% y le ponemos fixed */
     left: -0.75rem;
 
     pointer-events: none;
-  
+
 }
 
 
 
 
 /* Aplicamos diferentes propiedades dependiendo de los breakpoints */
-@media (max-width: 1200px){
-        
-    .Header-ul{
+@media (max-width: 1200px) {
+
+    .Header-ul {
         width: 100%;
         flex-flow: column nowrap;
     }
 
-    .Header-li{
+    .Header-li {
         width: 100%;
         text-align: end;
     }
 
 }
 
-@media (max-width: 1170px){    
-    .Habilidades-texto{
+@media (max-width: 1170px) {
+    .Habilidades-texto {
         width: 100%;
 
     }
 
-    .Habilidades.img{
+    .Habilidades.img {
         width: 40%;
     }
 
-    .Habilidad-ul{
+    .Habilidad-ul {
         padding-bottom: 10%;
     }
 
-    .Wrapper-div{
+    .Wrapper-div {
         flex-flow: column;
     }
 
-    .Principal-div{
+    .Principal-div {
         width: 100%;
     }
 
-    .Mexico-slider{
+    .Mexico-slider {
         width: 100%;
     }
 
-    .Slider-div{
+    .Slider-div {
         min-height: 600px;
     }
 
-    .Slider-img{
+    .Slider-img {
         object-fit: cover;
     }
 
 }
 
-@media (max-width: 1300px){
-    .Habilidad-p{
+@media (max-width: 1300px) {
+    .Habilidad-p {
         text-align: center;
     }
 
 }
 
 /* Quitamos en modo tablet para abajo el cursor */
-@media (max-width: 1024px){
-    .Cursor-web{
+@media (max-width: 1024px) {
+    .Cursor-web {
         display: none;
     }
 }
 
 
-@media (max-width: 930px){
+@media (max-width: 930px) {
 
-    .Textos-div{
+    .Textos-div {
         width: 100%;
         min-height: 25rem;
         background-image: url(../assets/linea.jpg);
         background-position: top;
         background-size: cover;
 
-        
+
         /* Le aplicamos una animación solo para resoluciones pequeñas */
         animation: slideDown 2s ease 1 both;
     }
 
-    
+
     @keyframes slideDown {
-        from{
+        from {
             transform: translateX(-100%);
         }
-        to{
+
+        to {
             transform: translateX(0%);
         }
-        
+
     }
 
-    #Titulo-h3{
+    #Titulo-h3 {
         font-size: 1.3em;
     }
 
-    .Habilidades-grid{
-       
+    .Habilidades-grid {
+
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
     }
 
-    .Habilidades-primero{
-    
+    .Habilidades-primero {
+
         width: 100%;
         min-height: 18.75rem;
         grid: initial;
@@ -1007,32 +1029,32 @@ Queremos que ocupe el 100% y le ponemos fixed */
     }
 
 
-    .Habilidades-texto{
+    .Habilidades-texto {
         width: 100%;
         min-height: 12.5rem;
         background-color: var(--var-c-primary);
     }
 
-    .Habilidades-div{
+    .Habilidades-div {
         display: none;
     }
 
-    .Habilidad-ul{
+    .Habilidad-ul {
         width: 100%;
         border-bottom: var(--var-c-secundary) solid 3px;
     }
 
-    .Habilidad-li{
+    .Habilidad-li {
         width: 100%;
         text-align: center;
     }
 
-    .Habilidad-img{
-       display: none;
-       
+    .Habilidad-img {
+        display: none;
+
     }
 
-    .Habilidad-p{
+    .Habilidad-p {
         font-size: 1em;
         width: 100%;
         min-height: 60px;
@@ -1043,44 +1065,43 @@ Queremos que ocupe el 100% y le ponemos fixed */
 
     /* Le ponemos al 60 porque no quiero que suba demasiado y se vaya de bloque de habilidad */
     @keyframes slideDown {
-        from{
+        from {
             transform: translateY(-60%);
         }
-        to{
+
+        to {
             transform: translateY(0%);
         }
-        
+
     }
 
 
-    .Wrapper-div{
+    .Wrapper-div {
         flex-direction: column-reverse;
     }
-    
-    .Slider-div{
+
+    .Slider-div {
         min-height: 25rem;
     }
 
-    .Textos{
+    .Textos {
         min-height: 6.25rem;
         margin: 20px 0 0 0;
     }
-    
-    .Tooltip-img{
+
+    .Tooltip-img {
         width: 9.375rem;
         min-height: 20px;
     }
-    
-    .Footer-nav{
+
+    .Footer-nav {
         display: none;
     }
 
-    .Footer-derecha{
+    .Footer-derecha {
         width: 80%;
         justify-content: start;
 
-        padding: 0 0 0  5%;
+        padding: 0 0 0 5%;
     }
 }
-
-

@@ -1,40 +1,42 @@
 /* Aplicamos el reset para quitar propiedades a las etiquetas con valores determinados */
-*{
+* {
     margin: 0rem;
     padding: 0rem;
     border: 0rem;
     box-sizing: border-box;
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     display: block;
     text-decoration: none;
     color: var(--var-c-textos);
 }
 
-p a{
+p a {
     display: inline;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-Img , svg, video{
+Img,
+svg,
+video {
     width: 100%;
     height: inherit;
     display: block;
 }
 
-svg{
-   fill: currentColor;
+svg {
+    fill: currentColor;
 }
 
-:root{
+:root {
     font-family: "Poppins", serif;
     font-size: 1.1em;
 
@@ -45,7 +47,7 @@ svg{
 
 }
 
-body{
+body {
     hyphens: auto;
     background-color: var(--var-c-primary);
 
@@ -53,15 +55,25 @@ body{
     /* Quitamos el cursor para poner uno creado */
     cursor: none;
     margin: auto;
-   
+
 }
 
-h1 , h2 , h3 , h4 , h5 , h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: inherit;
     font-weight: inherit;
 }
 
-form , input , textarea , label , select , buttom {
+form,
+input,
+textarea,
+label,
+select,
+buttom {
     font-family: inherit;
     font-size: inherit;
     background-color: transparent;
@@ -74,14 +86,14 @@ y que tenga una opacidad */
 /* Ponemos un padding right para aumentar su espacio con el borde
 Además la hacemos fixed para que siempre esté por encima */
 
-.Contacto-seccion{
+.Contacto-seccion {
     width: 100%;
     min-height: 2.2rem;
-    background-color:var(--var-c-primary);
+    background-color: var(--var-c-primary);
     opacity: 0.8;
 
     padding: 0 5% 0 0;
-    
+
     position: fixed;
     top: 0;
     left: 0;
@@ -91,11 +103,11 @@ Además la hacemos fixed para que siempre esté por encima */
 }
 
 /* Esta caja contiene los dos elementos uno al lado de otro gracias a display flex */
-.Contacto-div{
+.Contacto-div {
     width: 100%;
     min-height: 2.2rem;
     background-color: var(--var-c-primary);
-    
+
     margin: auto;
 
     display: flex;
@@ -106,28 +118,28 @@ Además la hacemos fixed para que siempre esté por encima */
 }
 
 
-.Contacto-svg{
+.Contacto-svg {
     width: 1rem;
     min-height: 1rem;
     color: var(--var-c-textos);
 }
 
 /* Esta propiedad la usamos para cuando estemos por encima del elemento cambie el color */
-.Contacto-h1:hover{
+.Contacto-h1:hover {
     color: var(--var-c-secundary);
 }
 
-.Contacto-svg:hover{
+.Contacto-svg:hover {
     color: var(--var-c-secundary);
 }
 
 /* ------------------------------------------------ */
 
 /* Agrupamos el header el hero para que aparezcan uno al lado del otro */
-.Container-div{
+.Container-div {
     width: 100%;
     min-height: 100vh;
-   
+
     margin: auto;
 
     display: flex;
@@ -139,9 +151,9 @@ Además la hacemos fixed para que siempre esté por encima */
 /* Comenzamos el header del móvil, le ponemos display none para que no aparezca en ordenador */
 
 /* Le damos un padding de un 4% para que esté ajustado con la foto*/
-.Header-movil{
+.Header-movil {
     width: 100%;
-   
+
     margin: auto;
     padding: 0 4%;
 
@@ -154,80 +166,81 @@ Además la hacemos fixed para que siempre esté por encima */
 
 /* El header tiene una animacion en horizontal con móvil y vertical con ordenador */
 @keyframes slideDown {
-    from{
+    from {
         transform: translateY(-100%);
     }
-    to{
+
+    to {
         transform: translateY(0%);
     }
-    
+
 }
 
-.Movil-h2{
+.Movil-h2 {
     width: 40%;
 }
 
 /* Este es el logo del header */
-.Movil-img{
+.Movil-img {
     width: 8rem;
     min-height: 2rem;
 
 }
 
-.Movil-nav{
+.Movil-nav {
     width: 80%;
     padding: 0 4%;
-        /* Para alinearlo con el contacto */
+    /* Para alinearlo con el contacto */
 }
 
-.Movil-ul{
+.Movil-ul {
     width: 100%;
 
     /* Lo posicionamos a la derecha alineado con contacto */
     display: flex;
     flex-flow: row nowrap;
-    justify-content:end;
+    justify-content: end;
     align-items: start;
 
 }
 
-.Movil-li{
+.Movil-li {
     width: calc(100%/3);
     text-align: end;
 }
 
 /* Aplicamos propiedades diferentes cuando estamos por encima */
-.Yo-a{
-    color:var(--var-c-textos);
+.Yo-a {
+    color: var(--var-c-textos);
     font-weight: 400;
 }
 
-.Yo-a:hover{
-        color: var(--var-c-secundary);
-    }
-
-.Proyectos-a{
-    color:var(--var-c-textos);
-    font-weight: 400;
-}
-
-.Proyectos-a:hover{
+.Yo-a:hover {
     color: var(--var-c-secundary);
 }
 
-.Razones-a{
-    color:var(--var-c-textos);
+.Proyectos-a {
+    color: var(--var-c-textos);
     font-weight: 400;
 }
 
-.Razones-a:hover{
+.Proyectos-a:hover {
+    color: var(--var-c-secundary);
+}
+
+.Razones-a {
+    color: var(--var-c-textos);
+    font-weight: 400;
+}
+
+.Razones-a:hover {
     color: var(--var-c-secundary);
 }
 
 /* Comenzamos el header de las otras resoluciones */
 
 /* El header lo posicionamos a la izquierda y colocamos los elementos de dentro en columna */
-.Header{
+.Header {
     width: 25%;
     min-height: 100vh;
     background-color: var(--var-c-primary);
@@ -240,22 +253,23 @@ Además la hacemos fixed para que siempre esté por encima */
     position: fixed;
     top: 0;
     left: 0;
-    
+
     animation: slideDown 2s ease 1 both;
 
 }
 
 @keyframes slideDown {
-    from{
+    from {
         transform: translateX(-100%);
     }
-    to{
+
+    to {
         transform: translateX(0%);
     }
-    
+
 }
 
-.Header-h2{
+.Header-h2 {
     width: 50%;
     min-height: 50px;
     background-color: var(--var-c-primary);
@@ -263,20 +277,20 @@ Además la hacemos fixed para que siempre esté por encima */
     display: flex;
     flex-flow: row-reverse nowrap;
     justify-content: start;
-    align-items: center; 
+    align-items: center;
 }
 
-.Header-img{
+.Header-img {
     background-color: var(--var-c-primary);
 
     object-fit: cover;
 }
 
-.Header-figcaption{
+.Header-figcaption {
     display: none;
 }
 
-.Menu-nav{
+.Menu-nav {
     width: 60%;
     background-color: var(--var-c-primary);
 
@@ -288,29 +302,29 @@ Además la hacemos fixed para que siempre esté por encima */
     writing-mode: horizontal-tb;
 }
 
-.Menu-li{
-        color:var(--var-c-textos);
-        text-align: start;
-        font-weight: 400;
+.Menu-li {
+    color: var(--var-c-textos);
+    text-align: start;
+    font-weight: 400;
 }
 
 /* Cuando me posiciono con el ratón cambio propiedades */
 
-.Yo-a:hover{
-        color: var(--var-c-secundary);
-    }
-
-.Proyectos-a:hover{
+.Yo-a:hover {
     color: var(--var-c-secundary);
 }
 
-.Razones-a:hover{
+.Proyectos-a:hover {
+    color: var(--var-c-secundary);
+}
+
+.Razones-a:hover {
     color: var(--var-c-secundary);
 }
 
 /* Comienzo del .Hero 
 Le aplicamos un 75% porque el .Header tiene un 25%*/
-.Hero{
+.Hero {
     width: 75%;
     min-height: 800px;
     background-image: url(../assets/moviliniciobyn.jpg);
@@ -320,26 +334,26 @@ Le aplicamos un 75% porque el .Header tiene un 25%*/
     position: relative;
 }
 
-.Hero-div{
+.Hero-div {
     width: 100%;
 }
 
 
 /* Queremos colocar la etiqueta de los textos encima de la foto centrada */
-.Wrapper-div{
+.Wrapper-div {
     width: 450px;
     min-height: 250px;
 
     position: absolute;
-    top: calc( 50% - ( 250px / 2));
-    left: calc( 50% - ( 450px / 2));
+    top: calc(50% - (250px / 2));
+    left: calc(50% - (450px / 2));
 
     text-align: center;
-} 
+}
 
 
-.Hero-p--negocio{
-    color:var(--var-c-secundary);
+.Hero-p--negocio {
+    color: var(--var-c-secundary);
     font-size: 2em;
     font-weight: 700;
     text-transform: uppercase;
@@ -347,19 +361,19 @@ Le aplicamos un 75% porque el .Header tiene un 25%*/
     padding: 6%;
 }
 
-.Hero-p--estrategias{
-    color:var(--var-c-textos);
+.Hero-p--estrategias {
+    color: var(--var-c-textos);
     font-size: 1.3em;
     font-weight: 700;
     text-transform: uppercase;
-} 
+}
 
 
 
 /* ------------------------------------------- */
 /* Comienzo del .Footer
 Queremos que ocupe el 100% y le ponemos fixed */
-.Footer{
+.Footer {
     width: 100%;
     min-height: 40px;
     background-color: var(--var-c-primary);
@@ -370,7 +384,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
 }
 
 /* Le ponemos al wrapper el mismo padding que el del contacto para alinear */
-.Footer-wrapper{
+.Footer-wrapper {
     width: 100%;
     min-height: 50px;
 
@@ -380,13 +394,13 @@ Queremos que ocupe el 100% y le ponemos fixed */
     flex-flow: row-reverse nowrap;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 /* Posicionamos las formas de contacto en una linea */
-.Footer-izquierda{
+.Footer-izquierda {
     width: 20%;
-    min-height: 50px; 
+    min-height: 50px;
     /* background-color:red; */
 
     padding-right: 5%;
@@ -397,7 +411,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
     gap: 20px;
 }
 
-.Footer-a{
+.Footer-a {
     width: 200px;
     min-height: 30px;
 
@@ -412,38 +426,38 @@ Queremos que ocupe el 100% y le ponemos fixed */
     color: var(--var-c-textos);
 }
 
-.Footer-p{
+.Footer-p {
     color: var(--var-c-textos);
 }
 
-.Footer-a:hover{
+.Footer-a:hover {
     flex-direction: row;
 }
 
-.Footer-p:hover{
-    color:var(--var-c-secundary);
+.Footer-p:hover {
+    color: var(--var-c-secundary);
 }
 
 /* Hace referencia a la flecha de hablemos */
-.Flecha-svg{
+.Flecha-svg {
     width: 1rem;
     min-height: 1rem;
     color: var(--var-c-secundary);
 }
 
 /* Hace referencia a las formas de contacto */
-.Footer-svg{
+.Footer-svg {
     width: 1rem;
     min-height: 1rem;
     color: var(--var-c-textos);
 }
 
-.Footer-svg:hover{
+.Footer-svg:hover {
     color: var(--var-c-secundary);
 }
 
 /* Segundo bloque del footer: nav (centro)*/
-.Footer-nav{
+.Footer-nav {
     width: 60%;
     min-height: 50px;
     /* background-color:red; */
@@ -455,7 +469,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
 
 }
 
-.Footer-ul{
+.Footer-ul {
     width: 100%;
     min-height: 50px;
     /* background: saddlebrown; */
@@ -468,7 +482,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
 }
 
 /* Le ponemos un 20% de width porque el espacio del 100% está repartido entre los elementos */
-.Footer-derecha{
+.Footer-derecha {
     width: 20%;
     min-height: 50px;
     /* background-color: darkblue; */
@@ -486,7 +500,7 @@ Queremos que ocupe el 100% y le ponemos fixed */
     color: var(--var-c-textos);
 }
 
-.Cursor-web{
+.Cursor-web {
     width: 1.5rem;
     height: 1.5rem;
     background-color: var(--var-c-secundary);
@@ -498,75 +512,77 @@ Queremos que ocupe el 100% y le ponemos fixed */
     left: -0.75rem;
 
     pointer-events: none;
-  
+
 }
 
 
 /* Vamos a aplicar unas propiedades dependiendo de los breakpoints en donde hemos visto que la estructura requiere un cambio */
-@media (max-width: 1270px){
-    .Container-div{
+@media (max-width: 1270px) {
+    .Container-div {
         width: 100%;
         flex-flow: column nowrap;
     }
 
-    .Hero{
+    .Hero {
         /* Para que el movil siempre aparezca en pantalla */
         background-position: center;
-     }
+    }
 
-    .Hero{
+    .Hero {
         width: 100%;
     }
 
-    .Header{
+    .Header {
         display: none;
     }
 
     /* Al quitar el header añadimos el header del movil */
-    .Header-movil{
-        
-    /* Colocamos en row el logo y el nav */
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: start;
-    align-items: center;
+    .Header-movil {
 
-    width: 100%;
-    min-height: 100px;
-    background-color: var(--var-c-primary);
-    padding: 2.2rem 0 0 0;
+        /* Colocamos en row el logo y el nav */
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: start;
+        align-items: center;
+
+        width: 100%;
+        min-height: 100px;
+        background-color: var(--var-c-primary);
+        padding: 2.2rem 0 0 0;
 
     }
 }
 
 
-@media (max-width: 1030px){
-    .Hero{
-       background-position: bottom;
+@media (max-width: 1030px) {
+    .Hero {
+        background-position: bottom;
     }
-    .Movil-nav{
+
+    .Movil-nav {
         width: 100%;
     }
-    .Movil-ul{
+
+    .Movil-ul {
 
         width: 100%;
     }
 }
 
 /* Quitamos en modo tablet para abajo el cursor */
-@media (max-width: 1024px){
-    .Cursor-web{
+@media (max-width: 1024px) {
+    .Cursor-web {
         display: none;
     }
 }
 
-@media (max-width: 950px){
+@media (max-width: 950px) {
 
-    .Footer-nav{
+    .Footer-nav {
         display: none;
     }
 
-    .Footer-derecha{
+    .Footer-derecha {
         width: 50%;
         justify-content: start;
         padding: 2%;
@@ -574,35 +590,37 @@ Queremos que ocupe el 100% y le ponemos fixed */
         width: 100%;
     }
 
-    .Cursor-web{
+    .Cursor-web {
         display: none;
     }
 
 }
 
 
-@media (max-width: 770px){
+@media (max-width: 770px) {
+
     /* Vamos a cambiar la disposición de las listas de nav para que todo entre en la pantalla y sea visible de un vistazo */
-    .Movil-ul{
+    .Movil-ul {
         width: 100%;
         flex-flow: column nowrap;
     }
 
-    .Movil-li{
+    .Movil-li {
         width: 100%;
         text-align: end;
     }
 
-    .Hero{
+    .Hero {
         width: 100%;
         background-position: center;
     }
 
-    .Hero-p{
+    .Hero-p {
         width: 80%;
         font-size: 1.3em;
     }
-    .Wrapper-div{
+
+    .Wrapper-div {
         width: 50%;
         top: 400px;
         left: 30px;
