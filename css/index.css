@@ -134,17 +134,10 @@ Además la hacemos fixed para que siempre esté por encima */
 
 /* Le damos un padding de un 4% para que esté ajustado con la foto*/
 .Header-movil{
-    width: 95%;
-    min-height: 800px;
+    width: 100%;
    
     margin: auto;
     padding: 0 4%;
-
-    /* Colocamos en columna el logo y el nav */
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: start;
-    align-items: start;
 
     /* Al principio lo ocultamos luego ya en resoluciones determinadas será block */
     display: none;
@@ -163,6 +156,9 @@ Además la hacemos fixed para que siempre esté por encima */
     
 }
 
+.Movil-h2{
+    width: 40%;
+}
 
 /* Este es el logo del header */
 .Movil-img{
@@ -172,24 +168,24 @@ Además la hacemos fixed para que siempre esté por encima */
 }
 
 .Movil-nav{
-    width: 50%;
-    min-height: 1.25rem;
+    width: 80%;
+    padding: 0 4%;
+        /* Para alinearlo con el contacto */
 }
 
 .Movil-ul{
     width: 100%;
-    min-height: 3.125rem;
 
     display: flex;
     flex-flow: row nowrap;
-    justify-content:start;
+    justify-content:end;
     align-items: start;
-    
+
 }
 
 .Movil-li{
     width: calc(100%/3);
-    text-align: start;
+    text-align: end;
 }
 
 /* Aplicamos propiedades diferentes cuando estamos por encima */
@@ -251,8 +247,6 @@ Además la hacemos fixed para que siempre esté por encima */
     
 }
 
-
-
 .Header-h2{
     width: 50%;
     min-height: 50px;
@@ -288,7 +282,7 @@ Además la hacemos fixed para que siempre esté por encima */
 
 .Menu-li{
         color:var(--var-c-textos);
-        text-align: end;
+        text-align: start;
         font-weight: 400;
 }
 
@@ -328,6 +322,7 @@ Le aplicamos un 75% porque el .Header tiene un 25%*/
     width: 450px;
     min-height: 250px;
 
+
     position: absolute;
     top: calc( 50% - ( 250px / 2));
     left: calc( 50% - ( 450px / 2));
@@ -341,6 +336,8 @@ Le aplicamos un 75% porque el .Header tiene un 25%*/
     font-size: 2em;
     font-weight: 700;
     text-transform: uppercase;
+
+    padding: 6%;
 }
 
 .Hero-p--estrategias{
@@ -404,8 +401,6 @@ Queremos que ocupe el 100% y le ponemos fixed */
     gap: 2px;
 
     border-radius: 44px;
-
-    transition: 5s ease;
 
     color: var(--var-c-textos);
 }
@@ -519,13 +514,18 @@ Queremos que ocupe el 100% y le ponemos fixed */
     }
 
     .Header-movil{
-        display: block;
-        justify-content: start;
-        align-items: start;
+        
+    /* Colocamos en row el logo y el nav */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
 
-        width: 100%;
-        min-height: 200px;
-        background-color: var(--var-c-primary);
+    width: 100%;
+    min-height: 150px;
+    background-color: var(--var-c-primary);
+    padding: 2.2rem 0 0 0;
+
     }
 }
 
@@ -549,30 +549,42 @@ Queremos que ocupe el 100% y le ponemos fixed */
     }
 
     .Footer-derecha{
-        width: 80%;
+        width: 50%;
         justify-content: start;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .Cursor-web{
+        display: none;
     }
 
 }
 
 
-@media (max-width: 630px){
+@media (max-width: 770px){
     .Movil-ul{
         width: 100%;
         flex-flow: column nowrap;
-
-        padding: 0 0 2%;
     }
 
     .Movil-li{
         width: 100%;
+        text-align: end;
     }
 
     .Hero{
+        width: 100%;
         background-position: center;
     }
 
+    .Hero-p{
+        width: 80%;
+        font-size: 1.3em;
+    }
     .Wrapper-div{
+        width: 50%;
         top: 400px;
     }
 }
